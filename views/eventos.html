@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de Eventos</title>
+  </head>
+  <body>
+    <h1>Lista de Eventos</h1>
+
+    <!-- Botão para adicionar um evento padrão -->
+    <button id="add-event-btn">Adicionar Evento</button>
+
+    <!-- Container para exibir a lista de eventos -->
+    <ul id="event-list"></ul>
+
+    <script type="module" src="../controllers/event-controller.js"></script>
+    <script type="module">
+      import EventController from "../controllers/event-controller.js";
+
+      // Exibe a lista de eventos quando a página é carregada
+      document.addEventListener("DOMContentLoaded", () => {
+        EventController.displayEventList();
+      });
+
+      // Adiciona um evento quando o botão é clicado
+      document.getElementById("add-event-btn").addEventListener("click", () => {
+        // Adiciona um evento padrão (hard coded)
+        EventController.addNewEvent(
+          "Evento Padrão",
+          "2024-12-25",
+          "Local Padrão",
+          "Descrição do Evento Padrão",
+          1
+        );
+        EventController.displayEventList(); // Atualiza a lista
+      });
+    </script>
+  </body>
+</html>
