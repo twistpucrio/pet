@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ongs</title>
+    <title>contate-nos</title>
 </head>
 <body>
     <div id="container">
@@ -19,9 +19,49 @@
                 <a href="../HTML/favoritos.html">Favoritos</a>
             </nav>
         </header>
+
         <section id="conteudo">
 
+        <br/>
+
+        <h2>Formulário</h2>
+        
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" placeholder="nome" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="email" required><br><br>
+
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" name="telefone" placeholder="telefone" required><br><br>
+
+        <label>Tipo de Evento:</label>
+        <input type="radio" id="evento" name="tipo_evento" value="evento" required>
+        <label for="evento">Evento</label>
+        
+        <input type="radio" id="ong" name="tipo_evento" value="ong">
+        <label for="ong">ONG</label>
+        
+        <input type="radio" id="post" name="tipo_evento" value="post">
+        <label for="post">Post</label><br><br>
+
+        <label for="titulo">Título:</label>
+        <input type="text" id="titulo" name="titulo" placeholder="título" required><br><br>
+
+        <label for="imagem">Imagem (URL):</label>
+        <input type="text" id="imagem" placeholder="imagem" name="imagem"><br><br>
+
+        <label for="endereço">Endereço:</label>
+        <input type="text" id="endereço" name="endereço" placeholder="endereço" required><br><br>
+
+        <label for="descricao">Descrição:</label><br>
+        <br/>
+        <textarea id="descricao" name="descricao" placeholder="descrição" rows="4" cols="50" required></textarea><br><br>
+
+        <button type="submit">Enviar</button>
+    </form>
         </section>
+
         <footer id="footer">
             <section id="creditos">
                 <p>
