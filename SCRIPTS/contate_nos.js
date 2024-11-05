@@ -72,10 +72,9 @@ function formato_email(email) {
 //caso de telefone:
 
 /*
-quantidade de caracteres (mínimo 11; máximo 11): ;
+quantidade de caracteres (mínimo 11; máximo 11): OK ;
 não permitir letras (maiúsculas e minúsculas): OK ;
 não permitir caracteres especiais: OK ;
-não permitir espaços em branco: ;
 */
 
 function formato_telefone(telefone){
@@ -84,25 +83,67 @@ function formato_telefone(telefone){
         return false;
     }
     else if (telefone.search(/[^a-zA-Z0-9\-\/]/) !=-1){ //Caso tenha caracteres especiais
-        console.log("O telefone possui caracteres especiais.")
+        console.log("O telefone possui caractere(s) especiai(s).")
         return false;
     } 
-    else if (telefone.search()){ //Caso não tenha 11 numeros
-
+    else if (telefone.length<11){ //Caso não tenha 11 numeros
+        console.log("O telefone possui menos que 11 dígitos.")
+        return false;
+    }
+    else if (telefone.length>11){
+        console.log("O telefone possui mais que 11 dígitos.")
+        return false;
+    }
+    else{
+        return true;
     }
 }
 
+//caso titulo:
+/*
+quantidade de caracteres (máximo 32): OK ;
+*/
+
+function formato_titulo(titulo){
+    if (titulo.length>32){ //Caso tenha mais que 32 caracteres
+        console.log("O telefone possui mais que 32 dígitos.")
+        return false;
+    }
+    else{
+        return true;
+    }
+}
+
+//caso descrição:
+/*
+quantidade de caracteres (máximo 500): OK ;
+*/
+
+function formato_descricao(descricao){
+    if (descricao.length>500){ //Caso tenha mais que 32 caracteres
+        console.log("A descrição possui mais que 500 dígitos.")
+        return false;
+    }
+    else{
+        return true;
+    }
+}
 
 
 function limpar(){
     let nome = document.querySelector("#nome");
     let email = document.querySelector("#email");
     let telefone = document.querySelector("#telefone");
-
+    let titulo = document.querySelector("#titulo");
+    let descricao = document.querySelector("#descricao");
+    let endereco = document.querySelector("#descricao");
 
     nome.value = "";
     email.value = "";
-
+    telefone.value = "";
+    titulo.value = "";
+    descricao.value = "";
+    endereco.value = "";
 }
 
 window.addEventListener("load", 
@@ -118,10 +159,12 @@ window.addEventListener("load",
                 let nome = document.querySelector('#nome').value;
                 let email = document.querySelector('#email').value;
                 let telefone = document.querySelector('#telefone').value;
+                let titulo = document.querySelector('#titulo').value;
+                let descricao = document.querySelector('#descricao').value;
+                let endereco = document.querySelector('#endereco').value;
 
-
-                if (nome != "" && email != "" && telefone!="") {
-                    if (formato_nome(nome) && formato_email(email) && formato_telefone(telefone)) {
+                if (nome != "" && email != "" && telefone!="" && titulo !="" && descricao !="" && endereco != "") {
+                    if (formato_nome(nome) && formato_email(email) && formato_telefone(telefone) && formato_titulo(titulo) && formato_descricao(descricao)) {
                         alert("Formulário submetido com sucesso! Obrigada :)")
                     }
                     else {
@@ -133,6 +176,12 @@ window.addEventListener("load",
                         }
                         if(formato_telefone(telefone) == false){
                             alert("O formato to campo telefone não está próprio")
+                        }
+                        if(formato_titulo(titulo) == false){
+                            alert("O formato to campo titulo não está próprio")
+                        }
+                        if(formato_descricao(descricao) == false){
+                            alert("O formato to campo descrição não está próprio")
                         }
                     
                     }
@@ -150,6 +199,32 @@ window.addEventListener("load",
         botao_limpar.addEventListener("click", function(){
                 limpar();
         });
+
+        //Verifica caso nenhum arquivo tenha sido selecionado:
+        if(!file){
+            alert("Por favor, selecione um arquivo.");
+            return;
+        }
+
+        //Verifica se um tipo de arquivo foi selecionado:
+        if(!selectedFileType){
+            alert("Por favor, selecione um tipo de arquivo.");
+            return;
+        }
+
+        //Transforma a extensão do arquivo para minúscula:
+        let fileType = file.name.split('.').pop().toLowerCase();
+
+        //Define as extensões válidas para cada tipo de arquivo:
+        let validSelection = {
+            jpg: ['jpg', 'jpeg', 'png'],  
+        }
+        
+        // Verifica se a extensão do arquivo é permitida para o tipo selecionado
+        if (!validSelection[selectedFileType.value].includes(fileType)) {
+            alert("Tipo de arquivo não permitido! Por favor, selecione o tipo de arquivo correto.");
+            return;
+        }
     }
 )
 
