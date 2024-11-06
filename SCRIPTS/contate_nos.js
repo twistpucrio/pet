@@ -128,7 +128,58 @@ function formato_descricao(descricao){
         return true;
     }
 }
+function verifica_imagem(input) {
+    // Verifica se há um arquivo selecionado
+    if (!input.files || input.files.length === 0) {
+        alert("Por favor, selecione uma imagem.");
+        return false; // Caso nenhum arquivo tenha sido selecionado
+    }
 
+    // Obtém o arquivo selecionado
+    let imagem = input.files[0];
+
+    // Verifica se o arquivo é uma imagem
+    if (!imagem) {
+        alert("Nenhum arquivo selecionado.");
+        return false;
+    }
+
+    // Extrai a extensão do arquivo de maneira segura
+    let fileName = imagem.name;
+    let fileExtension = fileName.slice(fileName.lastIndexOf('.') + 1).toLowerCase();
+
+    // Define as extensões válidas para imagens
+    let validTypes = ['jpg', 'jpeg', 'png'];
+
+    // Verifica se a extensão do arquivo é permitida
+    if (!validTypes.includes(fileExtension)) {
+        alert("Tipo de arquivo não permitido! Por favor, selecione uma imagem .png, .jpg ou .jpeg.");
+        return false; // Retorna false para indicar que a validação falhou
+    }
+
+  
+    return true;
+}
+
+function verificar_tipo_evento() {
+    const radios = document.getElementsByName("tipo_evento");
+    let selecionado = 0;
+
+    // Conta quantos botões de rádio estão selecionados
+    for (let i = 0; i < radios.length; i++) {
+        if (radios[i].checked) {
+            selecionado++;
+        }
+    }
+
+    // Verifica se exatamente um botão de rádio foi selecionado
+    if (selecionado === 1) {
+        return true;  
+    } else {
+        alert("Por favor, selecione exatamente um tipo de evento.");
+        return false;  
+    }
+}
 
 function limpar(){
     let nome = document.querySelector("#nome");
@@ -136,7 +187,10 @@ function limpar(){
     let telefone = document.querySelector("#telefone");
     let titulo = document.querySelector("#titulo");
     let descricao = document.querySelector("#descricao");
-    let endereco = document.querySelector("#descricao");
+    let endereco = document.querySelector("#endereco");
+    let imagem = document.querySelector("#imagem");
+    // evento ong post
+   
 
     nome.value = "";
     email.value = "";
@@ -144,88 +198,70 @@ function limpar(){
     titulo.value = "";
     descricao.value = "";
     endereco.value = "";
-}
-
-window.addEventListener("load", 
-    function (){
-        //evento 1 - busca no texto na textarea após clicar no botão "Submeter".
-
-        //id do botão submeter: botao_submeter;
-        //name do botão submeter: submeter.
-
-        let evento_enviar = document.querySelector('#enviar');
-
-        evento_enviar.addEventListener("click", function(){
-                let nome = document.querySelector('#nome').value;
-                let email = document.querySelector('#email').value;
-                let telefone = document.querySelector('#telefone').value;
-                let titulo = document.querySelector('#titulo').value;
-                let descricao = document.querySelector('#descricao').value;
-                let endereco = document.querySelector('#endereco').value;
-
-                if (nome != "" && email != "" && telefone!="" && titulo !="" && descricao !="" && endereco != "") {
-                    if (formato_nome(nome) && formato_email(email) && formato_telefone(telefone) && formato_titulo(titulo) && formato_descricao(descricao)) {
-                        alert("Formulário submetido com sucesso! Obrigada :)")
-                    }
-                    else {
-                        if (formato_nome(nome) == false) {
-                            alert("O formato do campo Nome não está próprio.\nCampo Nome não deve ter nenhum número.");
-                        }
-                        if (formato_email(email) == false) {
-                            alert("O formato do campo Email não está próprio.\nCampo Email deve:\n-ter todas as letras em minúsculo;\n-permitir os caracteres especiais ponto final, underscore e um arroba;\n-haver algum texto antes e depois da arroba.");
-                        }
-                        if(formato_telefone(telefone) == false){
-                            alert("O formato to campo telefone não está próprio")
-                        }
-                        if(formato_titulo(titulo) == false){
-                            alert("O formato to campo titulo não está próprio")
-                        }
-                        if(formato_descricao(descricao) == false){
-                            alert("O formato to campo descrição não está próprio")
-                        }
-                    
-                    }
-                }
-
-                else {
-                    alert("Algum campo está vazio. Por favor, preencha todas as informações do formúlario.");
-                }               
-            }
-        )
-        //evento 2 - limpar o formulário após clicar no botão "Limpar".
-
-        let botao_limpar = document.querySelector("#limpar");
-
-        botao_limpar.addEventListener("click", function(){
-                limpar();
-        });
-
-        //Verifica caso nenhum arquivo tenha sido selecionado:
-        if(!file){
-            alert("Por favor, selecione um arquivo.");
-            return;
-        }
-
-        //Verifica se um tipo de arquivo foi selecionado:
-        if(!selectedFileType){
-            alert("Por favor, selecione um tipo de arquivo.");
-            return;
-        }
-
-        //Transforma a extensão do arquivo para minúscula:
-        let fileType = file.name.split('.').pop().toLowerCase();
-
-        //Define as extensões válidas para cada tipo de arquivo:
-        let validSelection = {
-            jpg: ['jpg', 'jpeg', 'png'],  
-        }
-        
-        // Verifica se a extensão do arquivo é permitida para o tipo selecionado
-        if (!validSelection[selectedFileType.value].includes(fileType)) {
-            alert("Tipo de arquivo não permitido! Por favor, selecione o tipo de arquivo correto.");
-            return;
-        }
+    imagem.value = "";
+    
+    // Limpar a seleção dos botões de rádio
+    let radios = document.getElementsByName("tipo_evento");
+    for (let i = 0; i < radios.length; i++) {
+        radios[i].checked = false;
     }
-)
+}
+window.addEventListener("load", function () {
+    // Evento 1 - busca no texto na textarea após clicar no botão "Submeter".
+    let evento_enviar = document.querySelector('#enviar');
+
+    evento_enviar.addEventListener("click", function() {
+        let nome = document.querySelector('#nome').value;
+        let email = document.querySelector('#email').value;
+        let telefone = document.querySelector('#telefone').value;
+        let titulo = document.querySelector('#titulo').value;
+        let descricao = document.querySelector('#descricao').value;
+        let endereco = document.querySelector('#endereco').value;
+        let imagem = document.querySelector('#imagem'); // AQUI, PASSANDO O ELEMENTO (input) E NÃO O VALOR
+
+        // Verificando se pelo menos um dos botões de rádio foi selecionado
+        if (!verificar_tipo_evento()) {
+            return; // Se a validação dos botões de rádio falhar, o formulário não é enviado
+        }
+
+        // Verificando se todos os campos foram preenchidos e se as validações estão corretas
+        if (nome != "" && email != "" && telefone != "" && titulo != "" && descricao != "" && endereco != "" && imagem.files.length > 0) {
+            if (
+                formato_nome(nome) && formato_email(email) && formato_telefone(telefone) && formato_titulo(titulo) && formato_descricao(descricao) && verifica_imagem(imagem)
+            ) {
+                alert("Formulário submetido com sucesso! Obrigada :)");
+            } else {
+                // Exibindo mensagens de erro específicas de cada campo
+                if (!formato_nome(nome)) {
+                    alert("O formato do campo Nome não está próprio.\nCampo Nome não deve ter nenhum número.");
+                }
+                if (!formato_email(email)) {
+                    alert("O formato do campo Email não está próprio.\nCampo Email deve:\n-ter todas as letras em minúsculo;\n-permitir os caracteres especiais ponto final, underscore e um arroba;\n-haver algum texto antes e depois da arroba.");
+                }
+                if (!formato_telefone(telefone)) {
+                    alert("O formato do campo telefone não está próprio");
+                }
+                if (!formato_titulo(titulo)) {
+                    alert("O formato do campo título não está próprio");
+                }
+                if (!formato_descricao(descricao)) {
+                    alert("O formato do campo descrição não está próprio");
+                }
+                if (!verifica_imagem(imagem)) {
+                    alert("O formato da imagem não está próprio");
+                }
+            }
+        } else {
+            alert("Algum campo está vazio. Por favor, preencha todas as informações do formulário.");
+        }
+    });
+
+    // Evento 2 - limpar o formulário após clicar no botão "Limpar".
+    let botao_limpar = document.querySelector("#limpar");
+
+    botao_limpar.addEventListener("click", function() {
+        limpar();
+    });
+});
 
 //COMPLETO

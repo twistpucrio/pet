@@ -50,7 +50,8 @@
         <input type="text" id="titulo" name="titulo" placeholder="título" required><br><br>
 
         <label for="imagem">Imagem (URL):</label>
-        <input  type="file" id="imagem" placeholder="imagem" name="imagem"><br><br>
+        <input type="file" id="imagem" name="imagem" onchange="verifica_imagem(this)"><br><br>
+
 
         <label for="endereco">Endereço:</label>
         <input type="text" id="endereco" name="endereco" placeholder="endereco" required><br><br>
