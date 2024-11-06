@@ -1,0 +1,33 @@
+[
+    {
+    "nome": "",
+    "tags": [
+                "eventos",
+                "adoção"
+            ],
+    "caminho_imagem": "../img/",
+    "alt_imagem": "",
+    "texto": ""
+    },
+    {
+        "nome": "",
+        "tags": [
+                "eventos",
+                "adoção",
+                "doação"
+            ],
+        "caminho_imagem": "../img/",
+        "alt_imagem": "",
+        "texto": ""
+    }, 
+    {
+        "nome": "",
+        "tags": [
+                "eventos",
+                "lazer"
+            ],
+        "caminho_imagem": "../img/",
+        "alt_imagem": "",
+        "texto": ""
+    }
+]

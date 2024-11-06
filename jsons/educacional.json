@@ -1,0 +1,34 @@
+[
+    {
+    "titulo": "Por que castrar seu bichinho?",
+    "tags": [
+                "educacional",
+                "saúde",
+                "castração"
+            ],
+    "caminho_imagem": "../img/animais_diversos.",
+    "alt_imagem": "Vários animais em um fundo branco: Labrador Retriever Amarelo, Papagaio cinza, Gato malhado, Porquinho da Índia marrom e branco, Porco marrom escuro, Coelho preto e Jabuti Marrom.",
+    "texto": "A castração é essencial para a saúde e bem-estar dos pets, ajudando a prevenir doenças graves, como câncer de mama, útero e próstata. Além disso, o procedimento reduz comportamentos indesejados, como agressividade e marcação de território, promovendo uma convivência mais tranquila. Animais castrados também têm menor tendência a fugir, já que perdem o instinto de buscar parceiros. Castrar seu bichinho contribui para o controle populacional e ajuda a diminuir o abandono e a superlotação de abrigos. É um ato de cuidado e responsabilidade, beneficiando tanto o animal quanto a sociedade."
+    },
+    {
+        "titulo": "Locais para levar seu cachorro para socializar!",
+        "tags": [
+                "educacional",
+                "saúde",
+                "lazer"
+            ],
+        "caminho_imagem": "../img/cachorros_no_gramado.",
+        "alt_imagem": "4 cachorrinhos pequenos e sorridentes correndo em um pasto verde.",
+        "texto": "Essas são praças especiais para levar seu cachorrinho para passear e encontrar outros dogs! A socialização ajuda seu cachorro a ser mais amigável, confiante e menos ansioso em novas situações, promovendo um comportamento equilibrado em diferentes ambientes e com outros animais.<br/>- Praça Mauro Duarte (Botafogo);<br/>- Praça General Leandro (Botafogo);<br/>- Praça Radial Sul (Botafogo);<br/>- Parque Eduardo Guinle (Laranjeiras)"
+    }, 
+    {
+        "titulo": "Como adestrar seu gato!",
+        "tags": [
+                "educacional",
+                "lazer"
+            ],
+        "caminho_imagem": "../img/gato_sentado.jpg",
+        "alt_imagem": "Gato sentado recebendo carinho de uma mão.",
+        "texto": "Ensinar seu gato a sentar é possível com paciência e reforço positivo. Aqui vai um passo a passo simples:<br/>1. Escolha um Petisco: Use um petisco que seu gato adore. Isso será fundamental para motivá-lo.<br/>2. Segure o Petisco: Com o gato em pé, segure o petisco perto do nariz dele para chamar sua atenção.<br/>3. Levante o Petisco: Devagar, mova o petisco em direção ao topo da cabeça do gato. Isso o incentivará a olhar para cima e, naturalmente, a sentar-se para alcançar o petisco.<br/>4. Diga “Senta”: Quando ele começar a sentar, diga “Senta” de forma calma. Assim, ele começa a associar o comando com o movimento.<br/>5. Recompense Imediatamente: Assim que ele sentar completamente, ofereça o petisco e elogie-o. A recompensa deve vir no mesmo instante, para reforçar o comportamento.<br/>6. Repita e Pratique: Faça isso em sessões curtas e repetidas ao longo dos dias. Gatos aprendem com tempo e paciência, então mantenha as sessões leves e divertidas para ele.<br/>7. Com o tempo, seu gato entenderá o comando e poderá até sentar sem a necessidade do petisco."
+    }
+]
