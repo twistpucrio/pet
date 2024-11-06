@@ -1,0 +1,10 @@
+[
+    { "id": 1, "name": "Evento de Lazer para seu pet", "tags": ["vacinação"] },
+    { "id": 2, "name": "Feira de Adoção de animais", "tags": ["adoção"] },
+    { "id": 3, "name": "Eventos de castração para animaizinhos", "tags": ["castração"] },
+    { "id": 4, "name": "Palestra sobre Saúde dos animais", "tags": ["saúde"] },
+    { "id": 5, "name": "Dia de Lazer para animais no Parque", "tags": ["lazer"] },
+    { "id": 6, "name": "Eventos de vacinação", "tags": ["vacinação"] },
+    { "id": 7, "name": "Doação de Ração para animais Necessitados", "tags": ["doação"] },
+    { "id": 8, "name": "Educacional sobre os pets", "tags": ["educacional"] }
+]
