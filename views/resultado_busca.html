@@ -3,23 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resultado Busca</title>
+    <title>Ruffles</title>
 </head>
 <body>
     <div id="container">
+
         <header id="header">
-            <img id="logo" src="" alt="logo ruffles.">
-            <nav id="menu">
-                <a href="../HTML/ongs.html">Ongs</a>
-                <a href="../HTML/eventos.html">Eventos</a>
-                <a href="../HTML/petshops.html">Petshop</a>
-                <a href="../HTML/educacional.html">Educacional</a>  
-                <a href="../HTML/contate-nos.html">Contate-nos</a>
+            <img id="logo" src="../img/logo.jpg" alt="logo ruffles.">
+            <nav id="menu">  
+                <a href="contate-nos.html">Contate-nos</a>
                 <input type="text" name="texto" id="texto" placeholder="Pesquisar em Ruffles"></input>
-                <a href="../HTML/favoritos.html">Favoritos</a>
+                <a href="favoritos.html">
+                    <img  id="imagem_favoritos" src="../img/favoritos.webp" alt="ícone de coração que encaminha para a página de favoritos.">
+                </a>
             </nav>
         </header>
+
         <section id="main">
+            <!-- Aba lateral da página de busca de pesquisa. COM FILTROS! -->
             <aside class="sidebar">
                 <h2>Tags</h2>
                 <ul class="tag-list">
@@ -34,7 +35,10 @@
                     <li><label><input type="checkbox" name="tag" value="saude"> Saúde</label></li>
                 </ul>
             </aside>
+
+            <!-- Aqui ficarão outros conteúdos da página de resultado de busca. -->
         </section>
+
         <footer id="footer">
             <section id="creditos">
                 <p>
@@ -52,9 +56,10 @@
                 <a href="https://github.com/twistpucrio/ruffles" target="_blank">
                     <img  id="github" src="../img/github.png" alt="logo do github.">
                 </a>
-                <a id="sobre-nos" href="sobre-nos.html">Sobre nós</a> 
+                <a id="sobre-nos" href="sobre_nos.html">Sobre nós</a> 
             </div>
         </footer>
+
     </div>
 </body>
 </html>
