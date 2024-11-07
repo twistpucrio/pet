@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado Busca</title>
+    <script src="/SCRIPTS/busca.js"></script>
+</head>
+<body>
+    <div id="container">
+        <header id="header">
+            <img id="logo" src="" alt="logo ruffles.">
+            <nav id="menu">
+                <a href="../HTML/ongs.html">Ongs</a>
+                <a href="../HTML/eventos.html">Eventos</a>
+                <a href="../HTML/petshops.html">Petshop</a>
+                <a href="../HTML/educacional.html">Educacional</a>  
+                <a href="../HTML/contate-nos.html">Contate-nos</a>
+                <input type="text" name="texto" id="searchInput" placeholder="Pesquisar em Ruffles"></input>
+                <button onclick="searchItems()">Buscar</button>
+                <a href="../HTML/favoritos.html">Favoritos</a>
+            </nav>
+        </header>
+        <section id="main">
+            <aside class="sidebar">
+                <h2>Tags</h2>
+                <ul class="tag-list">
+                    <li><label><input type="radio" name="tag" value="adocao"> Eventos</label></li>
+                    <li><label><input type="radio" name="tag" value="adocao"> Educacional</label></li>
+
+                    <li><label><input type="checkbox" name="tag" value="adocao"> Doação</label></li>
+                    <li><label><input type="checkbox" name="tag" value="adocao"> Adoção</label></li>
+                    <li><label><input type="checkbox" name="tag" value="castracao"> Castração</label></li>
+                    <li><label><input type="checkbox" name="tag" value="vacinacao"> Vacinação</label></li>
+                    <li><label><input type="checkbox" name="tag" value="lazer"> Lazer</label></li>
+                    <li><label><input type="checkbox" name="tag" value="saude"> Saúde</label></li>
+                </ul>
+            </aside>
+        </section>
+        <footer id="footer">
+            <section id="creditos">
+                <p>
+                    Desenvolvido por: Danielle Guimarães, Julia Simão, Mariana Ribeiro e Vitória Carteri.<br/>
+                    Projeto TWIST-2024
+                </p>
+            </section>
+            <div id="conteudos-footer">
+                <section id="versao">
+                    <p>
+                        ©Ruffles<br/>
+                        Versão do site: 1.0
+                    </p>     
+                </section>
+                <a href="https://github.com/twistpucrio/ruffles" target="_blank">
+                    <img  id="github" src="../img/github.png" alt="logo do github.">
+                </a>
+                <a id="sobre-nos" href="sobre-nos.html">Sobre nós</a> 
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

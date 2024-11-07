@@ -1,89 +1,89 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contate-nos</title>
-    <script src="../scripts/contate_nos.js"></script>
-</head>
-<body>
-    <div id="container">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Contate-nos</title>
+      <script src="../scripts/contate_nos.js"></script>
+  </head>
+  <body>
+      <div id="container">
 
-        <header id="header">
-            <nav id="menu">
-                <a href="../index.html">
-                    <img id="logo" src="../img/logo.jpg" alt="logo ruffles. ao apertar este ícone você será encaminhado para a página principal.">
-                </a>
-                <a href="contate_nos.html">Contate-nos</a>
-                <input type="text" name="texto" id="texto" placeholder="Pesquisar em Ruffles"></input>
-                <a href="favoritos.html">
-                    <img  id="imagem_favoritos" src="../img/favoritos.webp" alt="ícone de coração que encaminha para a página de favoritos.">
-                </a>
-            </nav>
-        </header>
+          <header id="header">
+              <nav id="menu">
+                  <a href="../index.html">
+                      <img id="logo" src="../img/logo.jpg" alt="logo ruffles. ao apertar este ícone você será encaminhado para a página principal.">
+                  </a>
+                  <a href="contate_nos.html">Contate-nos</a>
+                  <input type="text" name="texto" id="texto" placeholder="Pesquisar em Ruffles"></input>
+                  <a href="favoritos.html">
+                      <img  id="imagem_favoritos" src="../img/favoritos.webp" alt="ícone de coração que encaminha para a página de favoritos.">
+                  </a>
+              </nav>
+          </header>
 
-        <section id="conteudo">
-            <form>
-                <h2>Formulário</h2>
-        
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" placeholder="nome" required><br><br>
+          <section id="conteudo">
+              <form>
+                  <h2>Formulário</h2>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="email" required><br><br>
+                  <label for="nome">Nome:</label>
+                  <input type="text" id="nome" name="nome" placeholder="nome" required><br><br>
 
-                <label for="telefone">Telefone:</label>
-                <input type="tel" id="telefone" name="telefone" placeholder="telefone" required><br><br>
+                  <label for="email">Email:</label>
+                  <input type="email" id="email" name="email" placeholder="email" required><br><br>
 
-                <label>Tipo de Evento:</label>
-                <input type="radio" id="evento" name="tipo_evento" value="evento" required>
-                <label for="evento">Evento</label>
-                
-                <input type="radio" id="ong" name="tipo_evento" value="ong">
-                <label for="ong">ONG</label>
-                
-                <input type="radio" id="post" name="tipo_evento" value="post">
-                <label for="post">Post</label><br><br>
+                  <label for="telefone">Telefone:</label>
+                  <input type="tel" id="telefone" name="telefone" placeholder="telefone" required><br><br>
 
-                <label for="titulo">Título:</label>
-                <input type="text" id="titulo" name="titulo" placeholder="título" required><br><br>
+                  <label>Tipo de Evento:</label>
+                  <input type="radio" id="evento" name="tipo_evento" value="evento" required>
+                  <label for="evento">Evento</label>
 
-                <label for="imagem">Imagem (URL):</label>
-                <input type="file" id="imagem" name="imagem" onchange="verifica_imagem(this)"><br><br>
+                  <input type="radio" id="ong" name="tipo_evento" value="ong">
+                  <label for="ong">ONG</label>
+
+                  <input type="radio" id="post" name="tipo_evento" value="post">
+                  <label for="post">Post</label><br><br>
+
+                  <label for="titulo">Título:</label>
+                  <input type="text" id="titulo" name="titulo" placeholder="título" required><br><br>
+
+                  <label for="imagem">Imagem (URL):</label>
+                  <input type="file" id="imagem" name="imagem" onchange="verifica_imagem(this)"><br><br>
 
 
-                <label for="endereco">Endereço:</label>
-                <input type="text" id="endereco" name="endereco" placeholder="endereco" required><br><br>
+                  <label for="endereco">Endereço:</label>
+                  <input type="text" id="endereco" name="endereco" placeholder="endereco" required><br><br>
 
-                <label for="descricao">Descrição:</label><br>
-                <br/>
-                <textarea id="descricao" name="descricao" placeholder="descrição" rows="4" cols="50" required></textarea><br><br>
+                  <label for="descricao">Descrição:</label><br>
+                  <br/>
+                  <textarea id="descricao" name="descricao" placeholder="descrição" rows="4" cols="50" required></textarea><br><br>
 
-                <button id="enviar" name="enviar" type="submit">Enviar</button>
-                <button id="limpar" type="submit">Limpar Tudo</button>
-            </form>
-        </section>
+                  <button id="enviar" name="enviar" type="submit">Enviar</button>
+                  <button id="limpar" type="submit">Limpar Tudo</button>
+              </form>
+          </section>
 
-        <footer id="footer">
-            <section id="creditos">
-                <p>
-                    Desenvolvido por: Danielle Guimarães, Julia Simão, Mariana Ribeiro e Vitória Carteri.<br/>
-                    Projeto TWIST-2024
-                </p>
-            </section>
-            <div id="conteudos-footer">
-                <section id="versao">
-                    <p>
-                        ©Ruffles<br/>
-                        Versão do site: 1.0
-                    </p>     
-                </section>
-                <a href="https://github.com/twistpucrio/ruffles" target="_blank">
-                    <img  id="github" src="../img/github.png" alt="logo do github.">
-                </a>
-                <a id="sobre-nos" href="sobre_nos.html">Sobre nós</a> 
-            </div>
-        </footer>
-    </div>
-</body>
+          <footer id="footer">
+              <section id="creditos">
+                  <p>
+                      Desenvolvido por: Danielle Guimarães, Julia Simão, Mariana Ribeiro e Vitória Carteri.<br/>
+                      Projeto TWIST-2024
+                  </p>
+              </section>
+              <div id="conteudos-footer">
+                  <section id="versao">
+                      <p>
+                          ©Ruffles<br/>
+                          Versão do site: 1.0
+                      </p>     
+                  </section>
+                  <a href="https://github.com/twistpucrio/ruffles" target="_blank">
+                      <img  id="github" src="../img/github.png" alt="logo do github.">
+                  </a>
+                  <a id="sobre-nos" href="sobre_nos.html">Sobre nós</a> 
+              </div>
+          </footer>
+      </div>
+  </body>
 </html>
