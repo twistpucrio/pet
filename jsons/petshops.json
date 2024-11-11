@@ -1,6 +1,7 @@
 [
     {
-    "nome": "",
+    "nome": "pets",
+    "id": "pets",
     "tags": [
                 "eventos",
                 "adoção"
@@ -10,7 +11,8 @@
     "texto": ""
     },
     {
-        "nome": "",
+        "nome": "hipet",
+        "id": "hipet",
         "tags": [
                 "eventos",
                 "adoção",
@@ -21,7 +23,8 @@
         "texto": ""
     }, 
     {
-        "nome": "",
+        "nome": "ninoca",
+        "id": "ninoca",
         "tags": [
                 "eventos",
                 "lazer"

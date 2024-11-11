@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ruffles</title>
+    <script src="tags.js"></script>
 </head>
 <body>
     <div id="container">
@@ -21,30 +22,25 @@
         </header>
         <section id="main">
             <!-- Mockup dos posts! Abaixo: -->
-            <div class="post">
-                <div class="tags-cada-posts">
-                    <!-- Aqui serão adicionadas as tags de um post. -->
-                    <div id="educacional">
-                        *Tag*
-                    </div>
-                    <div id="adocao">
-                        *Tag*
-                    </div>
-                    <div id="doacao">
-                        *Tag*
-                    </div>
-                    <div id="saude">
-                        *Tag*
-                    </div>
-                    <div id="evento">
-                        *Tag*
-                    </div>
-                    <div id="castracao">
-                        *Tag*
-                    </div>
-                    <div id="vacinacao">
-                        *Tag*
-                    </div>
+            <h2>Tags</h2><br/>
+            <label>
+                <input type="checkbox" class="checkbox-filtro" name="filtro" onclick="filtrarItens('doacao')"> Doação
+            </label><br/>
+            <label>
+                <input type="checkbox" class="checkbox-filtro" name="filtro" onclick="filtrarItens('castracao')"> Castração
+            </label><br/>
+            <label>
+                <input type="checkbox" class="checkbox-filtro" name="filtro" onclick="filtrarItens('adocao')"> Adoção
+            </label><br/>
+            <label>
+                <input type="checkbox" class="checkbox-filtro" name="filtro" onclick="filtrarItens('vacinacao')"> Vacinação
+            </label><br/>
+            <label>
+                <input type="checkbox" class="checkbox-filtro" name="filtro" onclick="filtrarItens('lazer')"> Lazer
+            </label><br/>
+            <label>
+                <input type="checkbox" class="checkbox-filtro" name="filtro" onclick="filtrarItens('saude')"> Saúde
+            </label>
                 </div>
                 <div class="imagem-post">
                     <button id="botao-favoritos">

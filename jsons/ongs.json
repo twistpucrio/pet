@@ -1,6 +1,8 @@
 [
     {
     "titulo": "Feira de adoção na Praça do Mêtro Botafogo",
+    "id": "focinhos",
+    "nome": "focinhos",
     "tags": [
                 "eventos",
                 "adoção"
@@ -11,6 +13,8 @@
     },
     {
         "titulo": "Feira de adoção no Largo do Machado",
+        "id": "auauau",
+        "nome": "auauau",
         "tags": [
                 "eventos",
                 "adoção",
@@ -22,6 +26,8 @@
     }, 
     {
         "titulo": "Evento de doação de ração para os gatos da PUC-Rio (2022)",
+        "id": "dogslife",
+        "nome": "dogslife",
         "tags": [
                 "eventos",
                 "lazer"

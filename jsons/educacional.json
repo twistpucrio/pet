@@ -1,6 +1,8 @@
 [
     {
     "titulo": "Por que castrar seu bichinho?",
+    "id": "pipos",
+    "nome": "pipos",
     "tags": [
                 "educacional",
                 "saúde",
@@ -12,6 +14,8 @@
     },
     {
         "titulo": "Locais para levar seu cachorro para socializar!",
+        "id": "gatinho",
+        "nome": "gatinho",
         "tags": [
                 "educacional",
                 "saúde",
@@ -23,6 +27,8 @@
     }, 
     {
         "titulo": "Como adestrar seu gato!",
+        "id": "catiorro",
+        "nome": "catiorro",
         "tags": [
                 "educacional",
                 "lazer"
