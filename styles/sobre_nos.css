@@ -1,0 +1,14 @@
+#logo-sobre-nos {
+    height: 30rem;
+    width: 30rem;
+}
+
+#fotos {
+
+}
+
+figure img{
+    border-radius: 100%;
+    height: 20rem;
+    width: 20rem;
+}
