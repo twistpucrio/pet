@@ -1,0 +1,34 @@
+#footer {
+    background-color: #bcd0cf;
+    text-align: center;
+    font-size: medium;
+    padding: 0.1%;
+}
+
+#conteudos-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+#versao{
+   display: inline-block;
+   justify-content: flex-start;
+   align-items: start;
+
+}
+
+#versao p{
+ margin: 0;
+}
+
+#github {
+    display: inline-block;
+    height: 2rem;
+    width: 2rem;
+}
+
+#sobre-nos {
+    display: inline-block;
+}
