@@ -1,4 +1,3 @@
-
 function cria_array_ongs() {
     return fetch("../ongs.json")
         .then(response => response.json())
@@ -26,7 +25,7 @@ function busca_nome_ong(array) {
     }
 }
 
-
+/*
 window.addEventListener("load", async function(){
     let campo_texto = document.getElementById("texto");
 
@@ -38,4 +37,5 @@ window.addEventListener("load", async function(){
         }
         
     });
-});
+})
+*/

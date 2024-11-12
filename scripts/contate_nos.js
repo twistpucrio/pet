@@ -1,9 +1,3 @@
-//Arquivo Javascript - Projeto 1.
-
-//caso do NOME: busca de números.
-
-//NÃO deve ter nenhum número no campo nome.
-
 function buscar_numeros(texto){
     let numeros_encontrados = texto.search(/\d/);
     return numeros_encontrados;
@@ -17,39 +11,6 @@ function formato_nome(nome) {
         return true;
     }
 }
-
-//caso de usuário:
-/*
-function formato_usuario(usuario) {
-    if (usuario.search(/[0-9]/) == 0) { //caso tenha números no começo. caso impróprio.
-        console.log("O usuário começa com número(s).")
-        return false;
-    }
-    else if (usuario.search(/\s/) != -1) { //caso tenha espaço em branco. caso impróprio. (caso de regex possível, testar: /^[ \t]+$/)
-        //alert("espaço em branco com /\s/: " + usuario.search(/\s/));
-        //alert("espaço em branco com /^[ \t]+$/: " + usuario.search(/^[ \t]+$/));
-        console.log("O usuário possui espaço em branco.")
-        return false;
-    }
-    else if (usuario.search(/[^A-Za-z0-9._]/) != -1) { //caso tenha caracteres especiais, fora ponto final e underscore. caso impróprio.
-        console.log("O usuário possui caractere(s) especiais não permitidos. Os caracteres especiais permitidos são o ponto final e underscore.")
-        return false;
-    }
-    else if (usuario.search(/[A-Z]/) != -1) { //caso tenha letra maiúscula. caso impróprio.
-        console.log("O usuário possui letra(s) maiúscula(s).")
-        return false;
-    }
-    else {
-        return true;
-    }
-}
-*/
-//caso de email:
-/*
-todas as letras em minúsculo: OK;
-os caracteres especiais permitidos são ponto final, underscore e um arroba: OK;
-deve haver algum texto antes e depois da arroba: OK.
-*/
 
 function formato_email(email) {
     if (email.search(/[A-Z]/) != -1) { //caso tenha letra maiúscula. caso impróprio.
@@ -206,6 +167,7 @@ function limpar(){
         radios[i].checked = false;
     }
 }
+
 window.addEventListener("load", function () {
     // Evento 1 - busca no texto na textarea após clicar no botão "Submeter".
     let evento_enviar = document.querySelector('#enviar');
@@ -263,5 +225,3 @@ window.addEventListener("load", function () {
         limpar();
     });
 });
-
-//COMPLETO
