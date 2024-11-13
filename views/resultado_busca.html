@@ -7,16 +7,17 @@
     <link rel="shortcut icon" href="../img/pata.webp" type="image/x-icon">
     <link rel="stylesheet" href="/styles/header.css">
     <link rel="stylesheet" href="/styles/footer.css">
-    <script src="tags.js"></script>
+    <link rel="stylesheet" href="/styles/resultados_busca.css">
+    <script type="module" src="../scripts/resultados-controller.js"></script>
+
 </head>
 <body>
     <div id="container">
-
         <header id="header">
             <img id="logo" src="../img/logo.jpg" alt="logo ruffles.">
             <nav id="menu">  
                 <a href="contate_nos.html">Contate-nos</a>
-                <input type="text" name="texto" id="texto" placeholder="Pesquisar em Ruffles"></input>
+                <input type="text" name="texto" id="searchInput" placeholder="Pesquisar em Ruffles"></input>
                 <button id="botao-barra-pesquisa">&star;</button>
                 <a href="favoritos.html">
                     <img  id="imagem_favoritos" src="../img/favoritos.webp" alt="ícone de coração que encaminha para a página de favoritos.">
@@ -24,30 +25,37 @@
             </nav>
         </header>
 
-        <section id="main">
-            <!-- Aba lateral da página de busca de pesquisa. COM FILTROS! -->
-                <h2>Tags</h2><br/>
-                <label>
-                    <input type="checkbox" class="checkbox-filtro" name="filtro" onclick="filtrarItens('doacao')"> Doação
-                </label><br/>
-                <label>
-                    <input type="checkbox" class="checkbox-filtro" name="filtro" onclick="filtrarItens('castracao')"> Castração
-                </label><br/>
-                <label>
-                    <input type="checkbox" class="checkbox-filtro" name="filtro" onclick="filtrarItens('adocao')"> Adoção
-                </label><br/>
-                <label>
-                    <input type="checkbox" class="checkbox-filtro" name="filtro" onclick="filtrarItens('vacinacao')"> Vacinação
-                </label><br/>
-                <label>
-                    <input type="checkbox" class="checkbox-filtro" name="filtro" onclick="filtrarItens('lazer')"> Lazer
-                </label><br/>
-                <label>
-                    <input type="checkbox" class="checkbox-filtro" name="filtro" onclick="filtrarItens('saude')"> Saúde
-                </label>
-                
-            <!-- Aqui ficarão outros conteúdos da página de resultado de busca. -->
-        </section>
+        <div class="main-content">
+            <section id="tags-section">
+                <!-- Aba lateral da página de busca de pesquisa. COM FILTROS! -->
+                    <h2>Tags</h2><br/>
+                    <label>
+                        <input type="checkbox" class="checkbox-filtro" name="filtro" onclick="filtrarItens('doacao')"> Doação
+                    </label><br/>
+                    <label>
+                        <input type="checkbox" class="checkbox-filtro" name="filtro" onclick="filtrarItens('castracao')"> Castração
+                    </label><br/>
+                    <label>
+                        <input type="checkbox" class="checkbox-filtro" name="filtro" onclick="filtrarItens('adocao')"> Adoção
+                    </label><br/>
+                    <label>
+                        <input type="checkbox" class="checkbox-filtro" name="filtro" onclick="filtrarItens('vacinacao')"> Vacinação
+                    </label><br/>
+                    <label>
+                        <input type="checkbox" class="checkbox-filtro" name="filtro" onclick="filtrarItens('lazer')"> Lazer
+                    </label><br/>
+                    <label>
+                        <input type="checkbox" class="checkbox-filtro" name="filtro" onclick="filtrarItens('saude')"> Saúde
+                    </label>
+                    
+                <!-- Aqui ficarão outros conteúdos da página de resultado de busca. -->
+            </section>
+            
+            <div id="postContainer" class="grid-container"></div>
+        </div>
+       
+
+        
 
         <footer id="footer">
             <section id="creditos">
