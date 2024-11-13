@@ -25,27 +25,32 @@
         </header>
 
         <section id="main">
-            <!-- Aba lateral da página de busca de pesquisa. COM FILTROS! -->
+            <div id="aba-lateral">
+                <!-- Aba lateral da página de busca de pesquisa. COM FILTROS! -->
                 <h2>Tags</h2><br/>
                 <label>
-                    <input type="checkbox" class="checkbox-filtro" name="filtro" onclick="filtrarItens('doacao')"> Doação
+                    <input type="radio" id="eventos" class="radio-filtro" name="filtro"> Eventos
                 </label><br/>
                 <label>
-                    <input type="checkbox" class="checkbox-filtro" name="filtro" onclick="filtrarItens('castracao')"> Castração
+                    <input type="radio" id="educacionais" class="radio-filtro" name="filtro"> Educacionais
+                </label><br/>
+                <h1>-------------</h1>
+                <label>
+                    <input type="checkbox" id="doacao" class="checkbox-filtro" name="filtro" onclick="filtrarItens('doacao')"> Doação
                 </label><br/>
                 <label>
-                    <input type="checkbox" class="checkbox-filtro" name="filtro" onclick="filtrarItens('adocao')"> Adoção
+                    <input type="checkbox" id="castracao" class="checkbox-filtro" name="filtro" onclick="filtrarItens('castracao')"> Castração
                 </label><br/>
                 <label>
-                    <input type="checkbox" class="checkbox-filtro" name="filtro" onclick="filtrarItens('vacinacao')"> Vacinação
+                    <input type="checkbox" id="vacinacao" class="checkbox-filtro" name="filtro" onclick="filtrarItens('vacinacao')"> Vacinação
                 </label><br/>
                 <label>
-                    <input type="checkbox" class="checkbox-filtro" name="filtro" onclick="filtrarItens('lazer')"> Lazer
+                    <input type="checkbox" id="lazer" class="checkbox-filtro" name="filtro" onclick="filtrarItens('lazer')"> Lazer
                 </label><br/>
                 <label>
-                    <input type="checkbox" class="checkbox-filtro" name="filtro" onclick="filtrarItens('saude')"> Saúde
+                    <input type="checkbox" id="saude" class="checkbox-filtro" name="filtro" onclick="filtrarItens('saude')"> Saúde
                 </label>
-                
+            </div>
             <!-- Aqui ficarão outros conteúdos da página de resultado de busca. -->
         </section>
 
