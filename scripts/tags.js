@@ -1,7 +1,7 @@
 // Função para carregar os itens a partir do arquivo JSON
 async function carregarItens() {
     try {
-        const response = await fetch("tags.json");
+        const response = await fetch("../json/tags.json");
         const itens = await response.json();
         return itens;
     } catch (erro) {
