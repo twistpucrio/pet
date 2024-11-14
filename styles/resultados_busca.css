@@ -1,0 +1,40 @@
+.main-content {
+  display: flex;
+  flex-direction: row;
+}
+
+#tags-section {
+  min-width: 7rem;
+}
+
+/* style.css */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Ensures 3 columns */
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px 8px 0 0;
+}
+
+.card h3 {
+  font-size: 1.2em;
+  margin: 12px 0;
+}
+
+.card p {
+  font-size: 0.9em;
+  color: #666;
+}
