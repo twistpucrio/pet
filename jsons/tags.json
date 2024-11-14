@@ -1,8 +1,0 @@
-[
-    { "id": 1, "nome": "Item de Doação", "categoria": "doacao" },
-    { "id": 2, "nome": "Item de Castração", "categoria": "castracao" },
-    { "id": 3, "nome": "Item de Adoção", "categoria": "adocao" },
-    { "id": 4, "nome": "Item de Vacinação", "categoria": "vacinacao" },
-    { "id": 5, "nome": "Item de Lazer", "categoria": "lazer" },
-    { "id": 6, "nome": "Item de Saúde", "categoria": "saude" }
-]
