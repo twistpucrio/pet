@@ -1,37 +1,4 @@
-// Função para carregar os itens a partir do arquivo JSON
-async function carregarItens() {
-    try {
-        const response = await fetch("tags.json");
-        const itens = await response.json();
-        return itens;
-    } catch (erro) {
-        console.error("Erro ao carregar os dados:", erro);
-        return [];
-    }
-}
-
-// Função para filtrar os itens com base na categoria selecionada
-async function filtrarItens(categoria) {
-    const checkboxes = document.querySelectorAll(".checkbox-filtro");
-
-    // Desmarca todos os checkboxes
-    checkboxes.forEach(checkbox => {
-        checkbox.checked = false;
-    });
-
-    // Marca apenas o checkbox correspondente à categoria selecionada
-    const checkboxAtivo = [...checkboxes].find(cb => cb.parentElement.textContent.trim().toLowerCase().includes(categoria));
-    if (checkboxAtivo) checkboxAtivo.checked = true;
-
-    // Carrega os itens do arquivo JSON
-    const dadosItens = await carregarItens();
-
-    // Filtra os itens conforme a categoria selecionada
-    const itensFiltrados = categoria === "" ? dadosItens : dadosItens.filter(item => item.categoria === categoria);
-
-    // Exibe os itens filtrados
-    exibirItens(itensFiltrados);
-}
+import { posts } from '../constants/posts.js';
 
 // Função para exibir os itens na página
 function exibirItens(itens) {
@@ -46,5 +13,29 @@ function exibirItens(itens) {
     });
 }
 
-// Carrega e exibe todos os itens ao abrir a página
-carregarItens().then(dadosItens => exibirItens(dadosItens));
+// Função para filtrar os itens com base nas tags selecionadas
+function filtrarItens() {
+    // Obtém todas as checkboxes de filtro
+    const checkboxes = document.querySelectorAll(".checkbox-filtro");
+
+    // Cria uma lista das tags selecionadas
+    const tagsSelecionadas = Array.from(checkboxes)
+        .filter(checkbox => checkbox.checked)
+        .map(checkbox => checkbox.value);
+
+    // Filtra os itens conforme as tags selecionadas
+    const itensFiltrados = tagsSelecionadas.length === 0 
+        ? posts 
+        : posts.filter(item => item.tags.some(tag => tagsSelecionadas.includes(tag)));
+
+    // Exibe os itens filtrados
+    exibirItens(itensFiltrados);
+}
+
+// Adiciona o evento de mudança a cada checkbox
+document.querySelectorAll(".checkbox-filtro").forEach(checkbox => {
+    checkbox.addEventListener("change", filtrarItens);
+});
+
+// Exibe todos os itens ao carregar a página
+exibirItens(posts);
