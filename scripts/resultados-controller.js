@@ -25,11 +25,23 @@ function addCSS() {
       width: 100px; /* Ajuste o tamanho da imagem, se necessário */
       height: auto;
     }
+
+    .highlight {
+      background-color: yellow; /* Ilumina a palavra com fundo amarelo */
+      font-weight: bold;
+      color: black; /* Pode mudar para a cor que preferir */
+    }
   `;
   document.head.appendChild(style); // Adiciona o estilo ao <head>
 }
 
-function renderPosts(posts) {
+// Função para destacar a palavra no texto
+function highlightText(text, searchTerm) {
+  const regex = new RegExp(`(${searchTerm})`, 'gi'); // Regex para encontrar o termo (case-insensitive)
+  return text.replace(regex, '<span class="highlight">$1</span>'); // Envolve a palavra encontrada com o <span> para destacar
+}
+
+function renderPosts(posts, searchTerm = "") {
   const container = document.getElementById("postContainer");
   container.innerHTML = "";
 
@@ -55,10 +67,10 @@ function renderPosts(posts) {
     img.alt = post.alt_imagem || "Imagem de post";
 
     const title = document.createElement("h3");
-    title.textContent = post.titulo;
+    title.innerHTML = searchTerm ? highlightText(post.titulo, searchTerm) : post.titulo; // Destaca a palavra no título
 
     const text = document.createElement("p");
-    text.textContent = post.texto || "Descrição do evento disponível no local.";
+    text.innerHTML = searchTerm ? highlightText(post.texto || "Descrição do evento disponível no local.", searchTerm) : (post.texto || "Descrição do evento disponível no local."); // Destaca a palavra no texto
 
     const tags = document.createElement("p");
     tags.textContent = `Tags: ${post.tags.join(", ")}`;
@@ -84,12 +96,13 @@ function filterPostsByTags() {
   renderPosts(filteredPosts);
 }
 
-// Function to search posts by title
+// Function to search posts by title and text
 function searchPosts(searchTerm) {
   const filteredPosts = posts.filter((post) =>
-    post["titulo"].toLowerCase().includes(searchTerm.toLowerCase())
+    post["titulo"].toLowerCase().includes(searchTerm.toLowerCase()) || 
+    post["texto"].toLowerCase().includes(searchTerm.toLowerCase())
   );
-  renderPosts(filteredPosts);
+  renderPosts(filteredPosts, searchTerm); // Passando o termo de busca para destacar
 }
 
 document.addEventListener("DOMContentLoaded", () => {

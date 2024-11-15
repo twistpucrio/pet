@@ -79,6 +79,46 @@ export const posts = [
           alt_imagem: "",
           texto: "A Feira de Adoção de Animais organizada pela Ampara Animal acontece todos os meses, oferecendo uma oportunidade para cães e gatos em situação de abandono encontrarem um lar. Durante o evento, os animais recebem cuidados, como vacina e vermifugação. Além disso, os participantes podem aprender sobre adoção responsável e cuidados com os pets. O evento ocorre na sede da ONG, em São Paulo. Adote um amigo, mude uma vida!"
       },
+      {
+        id: "nhanha",
+        titulo: "Evento de vacinação para seu amiguinho!",
+        nome: "nhanha",
+        endereco: "Praça Maria da Graça",
+        tags: [
+                    "vacinação",
+                    "saúde",
+                    "eventos"
+                ],
+        caminho_imagem: "../img/vacina.jpg",
+        alt_imagem: "Vários animais em um fundo branco: Labrador Retriever Amarelo, Papagaio cinza, Gato malhado, Porquinho da Índia marrom e branco, Porco marrom escuro, Coelho preto e Jabuti Marrom.",
+        texto: "A vacinação é essencial para a saúde do seu pet, protegendo-o contra doenças graves e contagiosas. Filhotes começam o ciclo de vacinas e, após isso, é importante manter as vacinas anuais em dia. Vacinas como V8/V10 para cães e as vacinas contra raiva e doenças respiratórias para gatos ajudam a evitar problemas sérios, garantindo mais saúde e bem-estar ao seu animal. Lembre-se: vacinar seu pet é um ato de cuidado e proteção!"
+        },
+        {
+            id: "adocao-doacao-saude",
+            titulo: "Adoção e Doação de Animais: Dê uma nova chance!",
+            nome: "Adoção Responsável",
+            endereco: "Centro de Adoção Pet - Rua dos Animais Felizes, 123",
+            tags: [
+              "adoção",
+              "doação",
+              "saúde",
+            ],
+            caminho_imagem: "../img/auau.jpg",
+            alt_imagem: "Vários animais fofos esperando para serem adotados, incluindo um cachorro peludo, um gato de olhos grandes, um coelho branco e um pássaro colorido.",
+            texto: "Adotar ou doar um animal é um ato de amor e responsabilidade. Ao adotar, você não só ganha um amigo fiel, como também ajuda a reduzir o número de animais abandonados e sem lar. Além disso, a adoção de animais resgatados pode contribuir para a sua saúde e bem-estar, proporcionando um lar seguro e amoroso. Seja responsável, adote ou doe de forma consciente e ajude a promover a felicidade dos animais e das famílias!"
+          },
+          {
+            id: "lazer-animal",
+            titulo: "Diversão e Lazer para Seu Pet!",
+            nome: "Atividades Recreativas para Animais",
+            endereco: "Parque Pet Feliz - Rua dos Bichos, 789",
+            tags: [
+              "lazer",
+            ],
+            caminho_imagem: "../img/cachorrinho1.jpg",
+            alt_imagem: "Cachorro brincando com uma bolinha em um parque, enquanto um gato observa em um arranhador ao fundo.",
+            texto: "Assim como nós, nossos pets também merecem momentos de lazer e diversão. Proporcione ao seu amigo peludo atividades que estimulam seu corpo e mente, como brincar de buscar, correr ao ar livre ou interagir com brinquedos. Essas atividades não só ajudam a gastar energia, mas também promovem o bem-estar emocional do seu animal, reduzindo o estresse e melhorando a qualidade de vida. Traga seu pet para o Parque Pet Feliz e aproveite um dia de lazer juntos!"
+          },
       //ongs
       {
         titulo: "Feira de adoção na Praça do Mêtro Botafogo",
