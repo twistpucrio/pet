@@ -9,13 +9,15 @@
     <link rel="stylesheet" href="/styles/footer.css">
     <link rel="stylesheet" href="/styles/resultados_busca.css">
     <script type="module" src="../scripts/resultados-controller.js"></script>
-    <script src="../scripts/tags.js"></script>
+    <script type="module" src="../scripts/tags.js"></script>
 
 </head>
 <body>
     <div id="container">
         <header id="header">
-            <img id="logo" src="../img/logo.jpg" alt="logo ruffles.">
+            <a href="../views/resultado_busca.html" target="_blank">
+                <img id="logo" src="../img/logo.jpg" alt="logo ruffles.">
+            </a>
             <nav id="menu">  
                 <a href="contate_nos.html">Contate-nos</a>
                 <input type="text" name="texto" id="searchInput" placeholder="Pesquisar em Ruffles"></input>
@@ -31,15 +33,16 @@
                 <!-- Aba lateral da página de busca de pesquisa. COM FILTROS! -->
                     <h2>Tags</h2><br/>
                     <div id="filtros">
-                        <label><input type="checkbox" class="checkbox-filtro" value="doação"> Doação</label><br/>
-                        <label><input type="checkbox" class="checkbox-filtro" value="castração"> Castração</label><br/>
-                        <label><input type="checkbox" class="checkbox-filtro" value="adoção"> Adoção</label><br/>
-                        <label><input type="checkbox" class="checkbox-filtro" value="lazer"> Lazer</label><br/>
-                        <label><input type="checkbox" class="checkbox-filtro" value="saude"> Saúde</label><br/>
-                        <label><input type="checkbox" class="checkbox-filtro" value="vacinação"> Vacinação</label><br/>
-                        <label><input type="checkbox" class="checkbox-filtro" value="educacional"> Educacional</label><br/>
-                        <label><input type="checkbox" class="checkbox-filtro" value="evento"> Evento</label><br/>
+                        <label><input type="checkbox" value="vacinação" class="filter-checkbox"> Vacinação</label><br/>
+                        <label><input type="checkbox" value="castração" class="filter-checkbox"> Castração</label><br/>
+                        <label><input type="checkbox" value="lazer" class="filter-checkbox"> Lazer</label><br/>
+                        <label><input type="checkbox" value="saúde" class="filter-checkbox"> Saúde</label><br/>
+                        <label><input type="checkbox" value="adoção" class="filter-checkbox"> Adoção</label><br/>
+                        <label><input type="checkbox" value="doação" class="filter-checkbox"> Doação</label><br/>
+                        <label><input type="checkbox" value="eventos" class="filter-checkbox"> Eventos</label><br/>
+                        <label><input type="checkbox" value="educacional" class="filter-checkbox"> Educacional</label><br/>
                     </div>
+                    
                     
                 <!-- Aqui ficarão outros conteúdos da página de resultado de busca. -->
             </section>
