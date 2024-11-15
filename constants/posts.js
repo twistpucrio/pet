@@ -79,6 +79,19 @@ export const posts = [
           alt_imagem: "",
           texto: "A Feira de Adoção de Animais organizada pela Ampara Animal acontece todos os meses, oferecendo uma oportunidade para cães e gatos em situação de abandono encontrarem um lar. Durante o evento, os animais recebem cuidados, como vacina e vermifugação. Além disso, os participantes podem aprender sobre adoção responsável e cuidados com os pets. O evento ocorre na sede da ONG, em São Paulo. Adote um amigo, mude uma vida!"
       },
+      {
+        id: "nhanha",
+        titulo: "Evento de vacinação para seu amiguinho!",
+        nome: "nhanha",
+        tags: [
+                    "vacinação",
+                    "saúde",
+                    "eventos"
+                ],
+        caminho_imagem: "../img/vacina.jpg",
+        alt_imagem: "Vários animais em um fundo branco: Labrador Retriever Amarelo, Papagaio cinza, Gato malhado, Porquinho da Índia marrom e branco, Porco marrom escuro, Coelho preto e Jabuti Marrom.",
+        texto: "A vacinação é essencial para a saúde do seu pet, protegendo-o contra doenças graves e contagiosas. Filhotes começam o ciclo de vacinas e, após isso, é importante manter as vacinas anuais em dia. Vacinas como V8/V10 para cães e as vacinas contra raiva e doenças respiratórias para gatos ajudam a evitar problemas sérios, garantindo mais saúde e bem-estar ao seu animal. Lembre-se: vacinar seu pet é um ato de cuidado e proteção!"
+        },
       //ongs
       {
         titulo: "Feira de adoção na Praça do Mêtro Botafogo",
