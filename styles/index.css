@@ -1,0 +1,11 @@
+#main{
+    display: flex;
+    justify-content: center;
+    height: 70vh;
+}
+
+#banner{
+    margin: 5px;
+    width: 85vw;
+    height: 35%;
+}
