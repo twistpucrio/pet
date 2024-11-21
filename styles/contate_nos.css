@@ -1,0 +1,14 @@
+
+
+/* Centralizar o formulário */
+#conteudo {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Para centralizar também na vertical */
+}
+
+label{
+    font-size: x-large;
+    
+}
+
