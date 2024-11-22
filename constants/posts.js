@@ -81,7 +81,7 @@ export const posts = [
       },
       {
         id: "nhanha",
-        titulo: "Evento de vacinação para seu amiguinho!",
+        titulo: "Evento de vacinação para seu aumiguinho!",
         nome: "nhanha",
         endereco: "Praça Maria da Graça",
         tags: [

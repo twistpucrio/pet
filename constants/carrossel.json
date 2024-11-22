@@ -1,0 +1,71 @@
+[
+        {
+        "titulo": "Por que castrar seu bichinho?",
+        "id": "pipos",
+        "nome": "pipos",
+        "tags": [
+                    "educacional",
+                    "saúde",
+                    "castração"
+                ],
+        "caminho_imagem": "../img/animais_diversos.",
+        "alt_imagem": "Vários animais em um fundo branco: Labrador Retriever Amarelo, Papagaio cinza, Gato malhado, Porquinho da Índia marrom e branco, Porco marrom escuro, Coelho preto e Jabuti Marrom.",
+        "texto": "A castração é essencial para a saúde e bem-estar dos pets, ajudando a prevenir doenças graves, como câncer de mama, útero e próstata. Além disso, o procedimento reduz comportamentos indesejados, como agressividade e marcação de território, promovendo uma convivência mais tranquila. Animais castrados também têm menor tendência a fugir, já que perdem o instinto de buscar parceiros. Castrar seu bichinho contribui para o controle populacional e ajuda a diminuir o abandono e a superlotação de abrigos. É um ato de cuidado e responsabilidade, beneficiando tanto o animal quanto a sociedade."
+        },
+        {
+            "id": "adocao-doacao-saude",
+            "titulo": "Adoção e Doação de Animais: Dê uma nova chance!",
+            "nome": "Adoção Responsável",
+            "endereco": "Centro de Adoção Pet - Rua dos Animais Felizes, 123",
+            "tags": [
+              "adoção",
+              "doação",
+              "saúde"
+            ],
+            "caminho_imagem": "../img/auau.jpg",
+            "alt_imagem": "Vários animais fofos esperando para serem adotados, incluindo um cachorro peludo, um gato de olhos grandes, um coelho branco e um pássaro colorido.",
+            "texto": "Adotar ou doar um animal é um ato de amor e responsabilidade. Ao adotar, você não só ganha um amigo fiel, como também ajuda a reduzir o número de animais abandonados e sem lar. Além disso, a adoção de animais resgatados pode contribuir para a sua saúde e bem-estar, proporcionando um lar seguro e amoroso. Seja responsável, adote ou doe de forma consciente e ajude a promover a felicidade dos animais e das famílias!"
+          },
+          {
+            "id": "nhanha",
+            "titulo": "Evento de vacinação para seu aumiguinho!",
+            "nome": "nhanha",
+            "endereco": "Praça Maria da Graça",
+            "tags": [
+                        "vacinação",
+                        "saúde",
+                        "eventos"
+                    ],
+            "caminho_imagem": "../img/vacina.jpg",
+            "alt_imagem": "Vários animais em um fundo branco: Labrador Retriever Amarelo, Papagaio cinza, Gato malhado, Porquinho da Índia marrom e branco, Porco marrom escuro, Coelho preto e Jabuti Marrom.",
+            "texto": "A vacinação é essencial para a saúde do seu pet, protegendo-o contra doenças graves e contagiosas. Filhotes começam o ciclo de vacinas e, após isso, é importante manter as vacinas anuais em dia. Vacinas como V8/V10 para cães e as vacinas contra raiva e doenças respiratórias para gatos ajudam a evitar problemas sérios, garantindo mais saúde e bem-estar ao seu animal. Lembre-se: vacinar seu pet é um ato de cuidado e proteção!"
+            },
+            {
+                "titulo": "Protetores de Rua",
+                "id": "auauau",
+                "nome": "auauau",
+                "endereco": "Rua do Limoreiro 1322",
+                "tags": [
+                        "eventos",
+                        "adoção",
+                        "doação"
+                    ],
+                "caminho_imagem": "../img/ong2.jpg",
+                "alt_imagem": "",
+                "texto": "Com 7 anos de atuação, a Protetores de Rua é uma ONG dedicada ao resgate e acolhimento de animais abandonados nas ruas. Oferecemos cuidados médicos, abrigo temporário e trabalhamos na busca por adoção responsável. Nossa missão é garantir dignidade e amor aos animais em situação de vulnerabilidade. A luta contra o abandono começa com um gesto de amor."
+            }, 
+            {
+                "titulo": "Evento da ONG Protetores de Rua",
+                "id": "feirinha",
+                "nome": "feirinha",
+                "endereco": "Rua Túlio Moreira, 34",
+                "tags": [
+                            "eventos",
+                            "adoção"
+                        ],
+                "caminho_imagem": "../img/protetores.jpg",
+                "alt_imagem": "",
+                "texto": "A Protetores de Rua promove a Vacinação Animal em comunidades carentes de São Paulo. Durante o evento, cães e gatos recebem vacina antirrábica, vermífugos e alimentação. O evento ocorre por 2 dias e tem como objetivo aumentar a saúde e o bem-estar dos animais em áreas de risco. A ação também oferece informações sobre cuidados básicos com os pets e conscientiza sobre a importância da vacinação. Vacine, cuide, proteja!"
+                }
+
+    ]
