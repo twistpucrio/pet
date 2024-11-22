@@ -122,6 +122,8 @@ function filterPostsByTags() {
 
 // Function to search posts by title and text
 function searchPosts(searchTerm) {
+  console.log(searchTerm)
+  
   const filteredPosts = posts.filter((post) =>
     post["titulo"].toLowerCase().includes(searchTerm.toLowerCase()) || 
     post["texto"].toLowerCase().includes(searchTerm.toLowerCase())
@@ -129,10 +131,19 @@ function searchPosts(searchTerm) {
   renderPosts(filteredPosts, searchTerm); // Passando o termo de busca para destacar
 }
 
+function Termo_pesquisado_pela_url() {
+  const urlParams = new URLSearchParams(window.location.search);
+  console.log(urlParams.get('search'))
+  return urlParams.get('search') || ""; 
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   addCSS(); // Chama a função para adicionar o CSS no carregamento da página
   renderPosts(posts);
-
+  let termo_url = Termo_pesquisado_pela_url();
+  if (termo_url!=""){
+    searchPosts(termo_url);
+  }
   const checkboxes = document.querySelectorAll(".filter-checkbox");
   checkboxes.forEach((checkbox) => {
     checkbox.addEventListener("change", filterPostsByTags);
