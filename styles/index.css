@@ -9,3 +9,21 @@
     width: 85vw;
     height: 35%;
 }
+
+#navvejamais{
+    text-align: center;
+    align-items: center;
+}
+
+#avejamais{
+    background-color:#98b6b3;
+    padding: 1rem;
+    border-radius: 1rem;
+    color: black;
+    text-decoration: none;
+    font-size: larger;
+}
+
+#avejamais:hover{
+    background-color:#98b6b38a
+}
