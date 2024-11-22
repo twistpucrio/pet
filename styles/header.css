@@ -54,17 +54,21 @@ body {
 }
 
 #botao-barra-pesquisa {
-    background-color: #5c4d44;
+    background-color: #98b6b3;
     color: #fff;
     border: none;
-    padding: 0.5rem;
-    border-radius: 4px;
+    padding: 0rem;
     cursor: pointer;
-    font-size: 1rem;
+    border-radius: 25px;
+}
+
+#sherlockdog {
+    height: 7rem;
+    width: 7rem;
 }
 
 #botao-barra-pesquisa:hover {
-    background-color: #333; /* Muda cor no hover */
+    background-color: #799290; /* Muda cor no hover */
 }
 
 
