@@ -14,7 +14,7 @@ body {
 }
 
 #header {
-    background-color: #98b6b3;
+    background-color: #bcd0cf;
     display: flex;
     justify-content: center; /* Centraliza o conteúdo do header */
     align-items: center;
@@ -54,7 +54,7 @@ body {
 }
 
 #botao-barra-pesquisa {
-    background-color: #98b6b3;
+    background-color: #bcd0cf;
     color: #fff;
     border: none;
     padding: 0rem;
@@ -68,10 +68,8 @@ body {
 }
 
 #botao-barra-pesquisa:hover {
-    background-color: #799290; /* Muda cor no hover */
+    background-color: #b2c5c4; /* Muda cor no hover */
 }
-
-
 
 #imagem_favoritos {
     height: 2.5rem;

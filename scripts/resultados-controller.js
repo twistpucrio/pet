@@ -4,6 +4,21 @@ import { posts } from "../constants/posts.js";
 function addCSS() {
   const style = document.createElement("style");
   style.innerHTML = `
+
+    .botao {
+      height: 2rem;
+      width: 2rem;
+      margin-bottom: 20px;
+     padding: 0;
+     border: none;
+     background: none;
+    }
+
+    .botao:hover {
+      background-color: #bcd0cf;
+      border-radius: 20%;
+    }
+     
     .no-results-message {
       display: flex;
       justify-content: center;
@@ -62,6 +77,14 @@ function renderPosts(posts, searchTerm = "") {
     const card = document.createElement("div");
     card.classList.add("card");
 
+    const botao = document.createElement("button");
+    const imagem_botao = document.createElement("img");
+    botao.classList.add("botao");
+
+    imagem_botao.src = "../img/favoritos.webp";
+    imagem_botao.alt = "Imagem de coração para favoritos.";
+    botao.appendChild(imagem_botao);
+
     const img = document.createElement("img");
     img.src = post.caminho_imagem || "../img/default.jpg";
     img.alt = post.alt_imagem || "Imagem de post";
@@ -75,6 +98,7 @@ function renderPosts(posts, searchTerm = "") {
     const tags = document.createElement("p");
     tags.textContent = `Tags: ${post.tags.join(", ")}`;
 
+    card.appendChild(botao);
     card.appendChild(img);
     card.appendChild(title);
     card.appendChild(text);
@@ -98,6 +122,8 @@ function filterPostsByTags() {
 
 // Function to search posts by title and text
 function searchPosts(searchTerm) {
+  console.log(searchTerm)
+  
   const filteredPosts = posts.filter((post) =>
     post["titulo"].toLowerCase().includes(searchTerm.toLowerCase()) || 
     post["texto"].toLowerCase().includes(searchTerm.toLowerCase())
@@ -105,10 +131,19 @@ function searchPosts(searchTerm) {
   renderPosts(filteredPosts, searchTerm); // Passando o termo de busca para destacar
 }
 
+function Termo_pesquisado_pela_url() {
+  const urlParams = new URLSearchParams(window.location.search);
+  console.log(urlParams.get('search'))
+  return urlParams.get('search') || ""; 
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   addCSS(); // Chama a função para adicionar o CSS no carregamento da página
   renderPosts(posts);
-
+  let termo_url = Termo_pesquisado_pela_url();
+  if (termo_url!=""){
+    searchPosts(termo_url);
+  }
   const checkboxes = document.querySelectorAll(".filter-checkbox");
   checkboxes.forEach((checkbox) => {
     checkbox.addEventListener("change", filterPostsByTags);
