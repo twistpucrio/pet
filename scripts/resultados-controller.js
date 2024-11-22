@@ -4,6 +4,21 @@ import { posts } from "../constants/posts.js";
 function addCSS() {
   const style = document.createElement("style");
   style.innerHTML = `
+
+    .botao {
+      height: 2rem;
+      width: 2rem;
+      margin-bottom: 20px;
+     padding: 0;
+     border: none;
+     background: none;
+    }
+
+    .botao:hover {
+      background-color: #bcd0cf;
+      border-radius: 20%;
+    }
+     
     .no-results-message {
       display: flex;
       justify-content: center;
@@ -62,6 +77,14 @@ function renderPosts(posts, searchTerm = "") {
     const card = document.createElement("div");
     card.classList.add("card");
 
+    const botao = document.createElement("button");
+    const imagem_botao = document.createElement("img");
+    botao.classList.add("botao");
+
+    imagem_botao.src = "../img/favoritos.webp";
+    imagem_botao.alt = "Imagem de coração para favoritos.";
+    botao.appendChild(imagem_botao);
+
     const img = document.createElement("img");
     img.src = post.caminho_imagem || "../img/default.jpg";
     img.alt = post.alt_imagem || "Imagem de post";
@@ -75,6 +98,7 @@ function renderPosts(posts, searchTerm = "") {
     const tags = document.createElement("p");
     tags.textContent = `Tags: ${post.tags.join(", ")}`;
 
+    card.appendChild(botao);
     card.appendChild(img);
     card.appendChild(title);
     card.appendChild(text);
