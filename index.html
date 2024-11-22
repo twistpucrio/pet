@@ -8,7 +8,7 @@
       <link rel="stylesheet" href="/styles/header.css">
       <link rel="stylesheet" href="/styles/footer.css">
       <link rel="stylesheet" href="/styles/index.css">
-      <script src="scripts/busca-por-ongs.js"></script>
+      <script src="scripts/index.js"></script>
   </head>
   <body>
       <div id="container">
@@ -28,14 +28,58 @@
           </header>
 
           <section id="main">
-            <img id="banner" src="/img/banner.png" alt="">
-          </section>
+            <img id="banner" src="/img/banner.png" alt="banner de animais fofinhos.">
+          </section><br/><br/><br/><br/><br/><br/><br/><br/>
+          <div class="carousel">
+            <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <img src="../img/animal2.png" alt="New York">
+                    <div class="carousel-caption">
+                        <h3>Por que castrar seu bichinho?</h3>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <img src="../img/auau.jpg" alt="Paris">
+                    <div class="carousel-caption">
+                        <h3>Adoção e Doação de Animais: Dê uma nova chance!</h3>
 
-          <section id="vejamais">
-            <nav>
-                <a href="/views/resultado_busca.html">Veja mais</a>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="carousel-item">
+                    <img src="../img/vacina.jpg" alt="Tokyo">
+                    <div class="carousel-caption">
+                        <h3>Evento de vacinação para seu aumiguinho!</h3>
+                        
+                    </div>
+                </div>
+                <!-- Slide 4 -->
+                <div class="carousel-item">
+                    <img src="../img/ong2.jpg" alt="New York">
+                    <div class="carousel-caption">
+                        <h3>Protetores de Rua</h3>
+                    </div>
+                </div>
+                <!-- Slide 5 -->
+                <div class="carousel-item">
+                    <img src="../img/protetores.jpg" alt="New York">
+                    <div class="carousel-caption">
+                        <h3>Evento da ONG Protetores de Rua</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-button carousel-prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="carousel-button carousel-next" onclick="moveSlide(1)">&#10095;</button><br/>
+
+        <section id="vejamais">
+            <nav id="navvejamais">
+                <a id="avejamais" href="/views/resultado_busca.html">Veja mais</a>
             </nav>
           </section>
+          <br/><br/><br/>
 
           <footer id="footer">
               <section id="creditos">
