@@ -1,10 +1,13 @@
-#logo-sobre-nos {
+#logo {
     height: 25rem;
     width: 25rem;
+    box-shadow: 10px  ;
 }
 
-#fotos {
-
+#div-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 figure img{
@@ -13,37 +16,17 @@ figure img{
     width: 20rem;
 }
 
-
-
-
 h1{
     text-align: center;
-    color: #446664;
     font-size: xxx-large;
 }
 
 h2{
     text-align: center;
-    color: #446664;
     font-size: xx-large;
 }
 
 /*======================Sobre Nós===========================*/
-
-#logoGeral{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#logoo {
-    border-radius: 50%;
-    height: 15rem;
-    width: 16rem;
-    
-}
-
-
 
 #fotos{
     display: flex;
@@ -54,7 +37,6 @@ h2{
 }
 
 figure{
-   
     text-align: center;     /* Centraliza a legenda */
   }
   
@@ -63,44 +45,29 @@ img{
     width: 13rem;
     border-radius: 50%;
     height: auto;
-    box-shadow: 2px 2px 10px #446664; 
-    
 }
 
 legend{
     font-size: large;
-    color: #446664;
 }
 
-#voltar{
-    font-size: x-large;
-    margin-top: 10%;
-    margin: 1%;
-    
-}
-
-#projeto{
-    color:#446664;
-    
-}
-
-p{
-    font-size: xx-large;
-    color:black;
-    background-color: #bcd0cf ;
-    width: 70rem;
-    text-align:center;
-    margin: auto;
-    padding: 2%;
+#voltar:hover{
+    background-color: #b2c5c4; /* Muda cor no hover */
 }
 
 #descricao{
     display: flex;
-    border-radius: 12%;
+    border-radius: 10%;
     justify-content: center;
     opacity: 0.7;
     align-items: center;
-    width: 60%; /* ou a largura desejada */
     height: 50%; /* opcional, se quiser centralizar verticalmente */
+    width: 50rem;
+    font-size: x-large;
+    color:black;
+    background-color: #bcd0cf ;
+    text-align:center;
+    margin: auto;
+    padding: 2%;
 }
 

@@ -137,6 +137,11 @@ function Termo_pesquisado_pela_url() {
   return urlParams.get('search') || ""; 
 }
 
+function limpar_barra_pesquisa() {
+  let barra_pesquisa = document.getElementById("searchInput");
+  barra_pesquisa.value = "";
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   addCSS(); // Chama a função para adicionar o CSS no carregamento da página
   renderPosts(posts);
@@ -154,5 +159,14 @@ document.addEventListener("DOMContentLoaded", () => {
     if (event.key === "Enter") {
       searchPosts(event.target.value);
     }
+  });
+
+});
+
+
+window.addEventListener("load", function () {
+  let botao_limpar = document.getElementById("botao-limpar-pesquisa");
+  botao_limpar.addEventListener("click",  function() {
+    limpar_barra_pesquisa();
   });
 });
