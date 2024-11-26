@@ -138,7 +138,7 @@ function Termo_pesquisado_pela_url() {
 }
 
 function limpar_barra_pesquisa() {
-  let barra_pesquisa = document.getElementsById("searchInput");
+  let barra_pesquisa = document.getElementById("searchInput");
   barra_pesquisa.value = "";
 }
 
@@ -162,6 +162,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+
 
 window.addEventListener("load", function () {
   let botao_limpar = document.getElementById("botao-limpar-pesquisa");
