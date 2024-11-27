@@ -5,18 +5,35 @@ function addCSS() {
   const style = document.createElement("style");
   style.innerHTML = `
 
+    .parte_de_cima {
+        display: flex;
+        margin: 10px 0;
+        justify-content: space-between;
+    }
+
+    .tags {
+        background-color: #bcd0cf;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
     .botao {
-      height: 2rem;
-      width: 2rem;
-      margin-bottom: 20px;
-     padding: 0;
-     border: none;
-     background: none;
+      height: 3rem;
+      width: 3rem;
+      border: none;
+      background: none;
+      padding: 10px;
+      margin: 10px;
     }
 
     .botao:hover {
       background-color: #bcd0cf;
       border-radius: 20%;
+    }
+
+    .img_post {
+      border-radius: 10px;
     }
      
     .no-results-message {
@@ -42,7 +59,7 @@ function addCSS() {
     }
 
     .highlight {
-      background-color: yellow; /* Ilumina a palavra com fundo amarelo */
+      background-color: #EECFA1; /* Ilumina a palavra com fundo amarelo */
       font-weight: bold;
       color: black; /* Pode mudar para a cor que preferir */
     }
@@ -77,9 +94,19 @@ function renderPosts(posts, searchTerm = "") {
     const card = document.createElement("div");
     card.classList.add("card");
 
+    const parte_de_cima = document.createElement("div");
+    parte_de_cima.classList.add("parte_de_cima");
+
     const botao = document.createElement("button");
     const imagem_botao = document.createElement("img");
     botao.classList.add("botao");
+
+    const tags = document.createElement("p");
+    tags.textContent = `${post.tags.join(" ⋆˚✿˖° ")}`;
+    tags.classList.add("tags");
+
+    parte_de_cima.appendChild(botao);
+    parte_de_cima.appendChild(tags);
 
     imagem_botao.src = "../img/favoritos.webp";
     imagem_botao.alt = "Imagem de coração para favoritos.";
@@ -88,6 +115,7 @@ function renderPosts(posts, searchTerm = "") {
     const img = document.createElement("img");
     img.src = post.caminho_imagem || "../img/default.jpg";
     img.alt = post.alt_imagem || "Imagem de post";
+    img.classList.add("img_post");
 
     const title = document.createElement("h3");
     title.innerHTML = searchTerm ? highlightText(post.titulo, searchTerm) : post.titulo; // Destaca a palavra no título
@@ -95,14 +123,10 @@ function renderPosts(posts, searchTerm = "") {
     const text = document.createElement("p");
     text.innerHTML = searchTerm ? highlightText(post.texto || "Descrição do evento disponível no local.", searchTerm) : (post.texto || "Descrição do evento disponível no local."); // Destaca a palavra no texto
 
-    const tags = document.createElement("p");
-    tags.textContent = `Tags: ${post.tags.join(", ")}`;
-
-    card.appendChild(botao);
+    card.appendChild(parte_de_cima);
     card.appendChild(img);
     card.appendChild(title);
     card.appendChild(text);
-    card.appendChild(tags);
 
     container.appendChild(card);
   });
