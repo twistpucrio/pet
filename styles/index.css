@@ -1,103 +1,147 @@
-#main{
-    display: flex;
-    justify-content: center;
-    height: 70vh;
-}
-
-#banner{
-    margin: 5px;
-    width: 85vw;
-    height: 45%;
-}
-
-#navvejamais{
-    text-align: center;
-    align-items: center;
-}
-
-#avejamais{
-    background-color: #bcd0cf;
-    padding: 1rem;
-    border-radius: 1rem;
-    color: black;
-    text-decoration: none;
-    font-size: larger;
-}
-
-#avejamais:hover{
-    background-color:#98b6b38a;
-}
-
-
 .carousel {
-    position: absolute;
-    top: 530px; /* Ajuste conforme necessário */
-    left: 50%;
-    transform: translateX(-50%);
-    max-width: 800px;
-    height: 500px;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    width: 90%; 
+    max-width: 1200px; 
+    height: 60vh; 
+    max-height: 600px; 
+    margin: 20px auto; 
+    overflow: visible; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
 }
 
 .carousel-inner {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    height: 100%;
+    height: 100%; 
 }
 
 .carousel-item {
-    min-width: 100%;
-    position: relative;
+    display: none; 
+    flex-shrink: 0;
+    width: 100%;
     height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-item.active {
+    display: flex; 
 }
 
 .carousel-item img {
     width: 100%;
-    height: 100%; /* Ajustar a imagem à altura do carousel */
-    object-fit: cover; /* Garantir que a imagem preencha o espaço sem distorção */
+    height: 100%;
+    object-fit: cover; 
 }
+
 
 .carousel-caption {
     position: absolute;
-    bottom: 20px;
+    bottom: 10%;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #bcd0cfae;
-    color:black;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
     padding: 10px 20px;
     border-radius: 10px;
+    font-size: 1.2em;
     text-align: center;
-    
+    max-width: 90%;
 }
 
 
-/* Especificidade para botões do carousel */
 .carousel-button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: #bcd0cf;
-    color:black;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
     border: none;
     padding: 15px;
     cursor: pointer;
-    border-radius: 25%;
+    border-radius: 50%;
+    font-size: 1.5em;
     z-index: 10;
-    font-size: x-large;
+    transition: background-color 0.3s;
 }
 
 .carousel-button:hover {
-    background-color:#98b6b38a;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
+
+#banner {
+    display: block;
+    margin: 20px auto; 
+    max-width: 100%; 
+}
+
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+}
+
+.indicator.active {
+    background: white;
+}
 .carousel-prev {
-    left: 480px;
-    top:780px;
+    left: -50px; 
 }
 
 .carousel-next {
-    right: 480px;
-    top:780px;
+    right: -50px; 
+}
+
+
+@media screen and (max-width: 768px) {
+    .carousel {
+        height: 50vh; 
+    }
+
+    .carousel-caption {
+        font-size: 1em; 
+    }
+
+    .carousel-button {
+        padding: 10px;
+        font-size: 1.2em;
+    }
+
+    .carousel-prev {
+        left: -30px; 
+    }
+
+    .carousel-next {
+        right: -30px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .carousel {
+        height: 40vh;
+    }
+
+    .carousel-caption {
+        font-size: 0.9em;
+    }
+
+    .carousel-button {
+        padding: 8px;
+        font-size: 1em;
+    }
+
+    .carousel-prev {
+        left: -20px;
+    }
+
+    .carousel-next {
+        right: -20px;
+    }
 }
