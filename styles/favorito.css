@@ -1,42 +1,63 @@
 .main-content {
-    display: flex;
-    flex-direction: row;
-  }
-  
-  #tags-section {
-    min-width: 7rem;
-  }
-  
-  /* Estilo atualizado para aumentar a largura dos posts lateralmente */
-  .grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Garante 3 colunas */
-    gap: 20px;
-    padding: 20px;
-  }
-  
-  .card {
-    border: 5px solid #bcd0cf;
-    border-radius: 20px;
-    padding: 16px;
-    text-align: center;
-    max-width: 450px;  /* Aumenta mais a largura dos cards lateralmente */
-    margin: 0 auto;    /* Centraliza os cards */
-  }
-  
-  .card img {
-    width: 100%;  /* Faz a imagem ocupar a largura total do card */
-    height: 200px; /* Ajusta a altura da imagem */
-    object-fit: cover; /* Ajusta a imagem para cobrir o espaço sem distorção */
-    border-radius: 10px; /* Borda arredondada para a imagem */
-  }
-  
-  .card h3 {
-    font-size: 1.3em; /* Aumenta o tamanho do título */
-    margin: 12px 0;
-  }
-  
-  .card p {
-    font-size: 1em;  /* Aumenta o tamanho da descrição */
-    color: #666;
-  }
+  display: flex;
+  flex-direction: row;
+}
+
+#tags-section {
+  min-width: 7rem;
+}
+
+/* Estilo atualizado para aumentar a largura dos posts lateralmente */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Garante 3 colunas */
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  border: 5px solid #bcd0cf;
+  border-radius: 20px;
+  padding: 16px;
+  text-align: center;
+  max-width: 450px; /* Aumenta mais a largura dos cards lateralmente */
+  margin: 0 auto;   /* Centraliza os cards */
+}
+
+.card img {
+  width: 100%; /* Faz a imagem ocupar a largura total do card */
+  height: 200px; /* Ajusta a altura da imagem */
+  object-fit: cover; /* Ajusta a imagem para cobrir o espaço sem distorção */
+  border-radius: 10px; /* Borda arredondada para a imagem */
+}
+
+.card h3 {
+  font-size: 1.3em; /* Aumenta o tamanho do título */
+  margin: 12px 0;
+}
+
+.card p {
+  font-size: 1em; /* Aumenta o tamanho da descrição */
+  color: #666;
+}
+
+/* Estilo do botão de desfavoritar */
+.desfavoritar-botao {
+  height: 3rem;
+  width: 3rem;
+  border: none;
+  background: none;
+  padding: 10px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.desfavoritar-botao:hover {
+  background-color: #bcd0cf;
+  border-radius: 20%;
+}
+
+.desfavoritar-botao img {
+  width: 100%; /* Ajusta a imagem ao tamanho do botão */
+  height: auto;
+}

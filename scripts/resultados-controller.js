@@ -39,7 +39,7 @@ function addCSS() {
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh; /* Garantir que ocupe toda a altura da tela */
+      height: 100vh;
       text-align: center;
       color: #333;
       font-size: 1.5em;
@@ -47,23 +47,23 @@ function addCSS() {
     }
 
     .no-results-message p {
-      margin: 0; /* Remove margens extras */
+      margin: 0;
       padding: 10px;
     }
 
     .no-results-message img {
-      margin-bottom: 20px; /* Se quiser um espaço entre a imagem e a mensagem */
-      width: 100px; /* Ajuste o tamanho da imagem, se necessário */
+      margin-bottom: 20px;
+      width: 100px;
       height: auto;
     }
 
     .highlight {
-      background-color: #EECFA1; /* Ilumina a palavra com fundo amarelo */
+      background-color: #EECFA1;
       font-weight: bold;
-      color: black; /* Pode mudar para a cor que preferir */
+      color: black;
     }
   `;
-  document.head.appendChild(style); // Adiciona o estilo ao <head>
+  document.head.appendChild(style);
 }
 
 function adicionarFavorito(post) {
@@ -71,14 +71,11 @@ function adicionarFavorito(post) {
   const produtoExistente = favoritos.find(item => item.id === post.id);
 
   if (produtoExistente) {
-    // Se já está favoritado, removemos da lista
     const novosFavoritos = favoritos.filter(item => item.id !== post.id); 
     sessionStorage.setItem('favorito', JSON.stringify(novosFavoritos)); 
-    alert('Produto removido dos favoritos!');
   } else {
-    // Se não está favoritado, adicionamos
     post.favorito = true;
-    favoritos.push(post); // Adiciona aos favoritos
+    favoritos.push(post);
     sessionStorage.setItem('favorito', JSON.stringify(favoritos)); 
   }
 }
@@ -87,7 +84,6 @@ function renderPosts(posts, searchTerm = "") {
   const container = document.getElementById("postContainer");
   container.innerHTML = "";
 
-  // Se não houver posts para mostrar
   if (posts.length === 0) {
     const noResultsMessage = document.createElement("div");
     noResultsMessage.classList.add("no-results-message");
@@ -108,8 +104,27 @@ function renderPosts(posts, searchTerm = "") {
     parte_de_cima.classList.add("parte_de_cima");
 
     const botao = document.createElement("button");
-    const botaoFavorito = document.createElement('button');
     botao.classList.add("botao");
+
+    const botaoFavorito = document.createElement("img");
+    botaoFavorito.alt = "Imagem de coração para favoritos ou desfavoritar.";
+
+    const favoritos = JSON.parse(sessionStorage.getItem('favorito')) || [];
+    const produtoExistente = favoritos.find(item => item.id === post.id);
+
+    // Corrigindo os caminhos para favoritar e desfavoritar
+    if (produtoExistente) {
+      botaoFavorito.src = "../img/desfavoritos.png"; // Ícone para desfavoritar
+    } else {
+      botaoFavorito.src = "../img/favoritos.webp"; // Ícone para favoritar
+    }
+
+    botao.appendChild(botaoFavorito);
+
+    botao.addEventListener('click', function () {
+      adicionarFavorito(post);
+      renderPosts(posts, searchTerm);
+    });
 
     const tags = document.createElement("p");
     tags.textContent = `${post.tags.join(" ⋆˚✿˖° ")}`;
@@ -118,29 +133,8 @@ function renderPosts(posts, searchTerm = "") {
     parte_de_cima.appendChild(botao);
     parte_de_cima.appendChild(tags);
 
-    // Verificar se o post já foi favoritado
-    const favoritos = JSON.parse(sessionStorage.getItem('favorito')) || [];
-    const produtoExistente = favoritos.find(item => item.id === post.id);
-    
-    // Definir o ícone do botão dependendo de se o post é favorito ou não
-    if (produtoExistente) {
-      botaoFavorito.src = "../img/desfavoritar.webp"; // Ícone de desfavoritar
-      botaoFavorito.alt = "Imagem de coração para desfavoritar.";
-    } else {
-      botaoFavorito.src = "../img/favoritos.webp"; // Ícone de favoritar
-      botaoFavorito.alt = "Imagem de coração para favoritos.";
-    }
-
-    botao.appendChild(botaoFavorito);
-
-    // Ao clicar no botão de favoritar/desfavoritar
-    botaoFavorito.addEventListener('click', function () {
-      adicionarFavorito(post); // Chama a função para adicionar ou remover do favoritos
-      renderPosts(posts, searchTerm); // Re-renderiza os posts após a alteração
-    });
-
     const img = document.createElement("img");
-    img.src = post.caminho_imagem || "../img/default.jpg";
+    img.src = post.caminho_imagem || "../img/favoritos.webp";
     img.alt = post.alt_imagem || "Imagem de post";
     img.classList.add("img_post");
 
@@ -159,16 +153,27 @@ function renderPosts(posts, searchTerm = "") {
   });
 }
 
+function highlightText(text, searchTerm) {
+  const regex = new RegExp(`(${searchTerm})`, 'gi');
+  return text.replace(regex, '<span class="highlight">$1</span>');
+}
+
 function searchPosts(searchTerm) {
-  console.log(searchTerm);
   const filteredPosts = posts.filter((post) =>
-    post["titulo"].toLowerCase().includes(searchTerm.toLowerCase()) || 
-    post["texto"].toLowerCase().includes(searchTerm.toLowerCase())
+    post.titulo.toLowerCase().includes(searchTerm.toLowerCase()) || 
+    post.texto.toLowerCase().includes(searchTerm.toLowerCase())
   );
-  renderPosts(filteredPosts, searchTerm); // Passando o termo de busca para destacar
+  renderPosts(filteredPosts, searchTerm);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  addCSS(); // Chama a função para adicionar o CSS no carregamento da página
+  addCSS();
   renderPosts(posts);
+
+  const searchInput = document.getElementById("searchInput");
+  searchInput.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+      searchPosts(event.target.value);
+    }
+  });
 });
