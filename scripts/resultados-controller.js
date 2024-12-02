@@ -4,7 +4,6 @@ import { posts } from "../constants/posts.js";
 function addCSS() {
   const style = document.createElement("style");
   style.innerHTML = `
-
     .parte_de_cima {
         display: flex;
         margin: 10px 0;
@@ -67,10 +66,21 @@ function addCSS() {
   document.head.appendChild(style); // Adiciona o estilo ao <head>
 }
 
-// Função para destacar a palavra no texto
-function highlightText(text, searchTerm) {
-  const regex = new RegExp(`(${searchTerm})`, 'gi'); // Regex para encontrar o termo (case-insensitive)
-  return text.replace(regex, '<span class="highlight">$1</span>'); // Envolve a palavra encontrada com o <span> para destacar
+function adicionarFavorito(post) {
+  const favoritos = JSON.parse(sessionStorage.getItem('favorito')) || [];  
+  const produtoExistente = favoritos.find(item => item.id === post.id);
+
+  if (produtoExistente) {
+    // Se já está favoritado, removemos da lista
+    const novosFavoritos = favoritos.filter(item => item.id !== post.id); 
+    sessionStorage.setItem('favorito', JSON.stringify(novosFavoritos)); 
+    alert('Produto removido dos favoritos!');
+  } else {
+    // Se não está favoritado, adicionamos
+    post.favorito = true;
+    favoritos.push(post); // Adiciona aos favoritos
+    sessionStorage.setItem('favorito', JSON.stringify(favoritos)); 
+  }
 }
 
 function renderPosts(posts, searchTerm = "") {
@@ -80,7 +90,7 @@ function renderPosts(posts, searchTerm = "") {
   // Se não houver posts para mostrar
   if (posts.length === 0) {
     const noResultsMessage = document.createElement("div");
-    noResultsMessage.classList.add("no-results-message"); // Adiciona a classe de centralização
+    noResultsMessage.classList.add("no-results-message");
 
     const text = document.createElement("p");
     text.textContent = "Nenhum resultado encontrado.";
@@ -98,7 +108,7 @@ function renderPosts(posts, searchTerm = "") {
     parte_de_cima.classList.add("parte_de_cima");
 
     const botao = document.createElement("button");
-    const imagem_botao = document.createElement("img");
+    const botaoFavorito = document.createElement('button');
     botao.classList.add("botao");
 
     const tags = document.createElement("p");
@@ -108,9 +118,26 @@ function renderPosts(posts, searchTerm = "") {
     parte_de_cima.appendChild(botao);
     parte_de_cima.appendChild(tags);
 
-    imagem_botao.src = "../img/favoritos.webp";
-    imagem_botao.alt = "Imagem de coração para favoritos.";
-    botao.appendChild(imagem_botao);
+    // Verificar se o post já foi favoritado
+    const favoritos = JSON.parse(sessionStorage.getItem('favorito')) || [];
+    const produtoExistente = favoritos.find(item => item.id === post.id);
+    
+    // Definir o ícone do botão dependendo de se o post é favorito ou não
+    if (produtoExistente) {
+      botaoFavorito.src = "../img/desfavoritar.webp"; // Ícone de desfavoritar
+      botaoFavorito.alt = "Imagem de coração para desfavoritar.";
+    } else {
+      botaoFavorito.src = "../img/favoritos.webp"; // Ícone de favoritar
+      botaoFavorito.alt = "Imagem de coração para favoritos.";
+    }
+
+    botao.appendChild(botaoFavorito);
+
+    // Ao clicar no botão de favoritar/desfavoritar
+    botaoFavorito.addEventListener('click', function () {
+      adicionarFavorito(post); // Chama a função para adicionar ou remover do favoritos
+      renderPosts(posts, searchTerm); // Re-renderiza os posts após a alteração
+    });
 
     const img = document.createElement("img");
     img.src = post.caminho_imagem || "../img/default.jpg";
@@ -118,10 +145,10 @@ function renderPosts(posts, searchTerm = "") {
     img.classList.add("img_post");
 
     const title = document.createElement("h3");
-    title.innerHTML = searchTerm ? highlightText(post.titulo, searchTerm) : post.titulo; // Destaca a palavra no título
+    title.innerHTML = searchTerm ? highlightText(post.titulo, searchTerm) : post.titulo;
 
     const text = document.createElement("p");
-    text.innerHTML = searchTerm ? highlightText(post.texto || "Descrição do evento disponível no local.", searchTerm) : (post.texto || "Descrição do evento disponível no local."); // Destaca a palavra no texto
+    text.innerHTML = searchTerm ? highlightText(post.texto || "Descrição do evento disponível no local.", searchTerm) : (post.texto || "Descrição do evento disponível no local.");
 
     card.appendChild(parte_de_cima);
     card.appendChild(img);
@@ -132,22 +159,8 @@ function renderPosts(posts, searchTerm = "") {
   });
 }
 
-function filterPostsByTags() {
-  const selectedTags = Array.from(document.querySelectorAll(".filter-checkbox:checked")).map(
-    (checkbox) => checkbox.value
-  );
-
-  const filteredPosts = posts.filter((post) =>
-    selectedTags.every((tag) => post.tags.includes(tag))
-  );
-  
-  renderPosts(filteredPosts);
-}
-
-// Function to search posts by title and text
 function searchPosts(searchTerm) {
-  console.log(searchTerm)
-  
+  console.log(searchTerm);
   const filteredPosts = posts.filter((post) =>
     post["titulo"].toLowerCase().includes(searchTerm.toLowerCase()) || 
     post["texto"].toLowerCase().includes(searchTerm.toLowerCase())
@@ -155,42 +168,7 @@ function searchPosts(searchTerm) {
   renderPosts(filteredPosts, searchTerm); // Passando o termo de busca para destacar
 }
 
-function Termo_pesquisado_pela_url() {
-  const urlParams = new URLSearchParams(window.location.search);
-  console.log(urlParams.get('search'))
-  return urlParams.get('search') || ""; 
-}
-
-function limpar_barra_pesquisa() {
-  let barra_pesquisa = document.getElementById("searchInput");
-  barra_pesquisa.value = "";
-}
-
 document.addEventListener("DOMContentLoaded", () => {
   addCSS(); // Chama a função para adicionar o CSS no carregamento da página
   renderPosts(posts);
-  let termo_url = Termo_pesquisado_pela_url();
-  if (termo_url!=""){
-    searchPosts(termo_url);
-  }
-  const checkboxes = document.querySelectorAll(".filter-checkbox");
-  checkboxes.forEach((checkbox) => {
-    checkbox.addEventListener("change", filterPostsByTags);
-  });
-
-  const searchInput = document.getElementById("searchInput");
-  searchInput.addEventListener("keydown", (event) => {
-    if (event.key === "Enter") {
-      searchPosts(event.target.value);
-    }
-  });
-
-});
-
-
-window.addEventListener("load", function () {
-  let botao_limpar = document.getElementById("botao-limpar-pesquisa");
-  botao_limpar.addEventListener("click",  function() {
-    limpar_barra_pesquisa();
-  });
 });

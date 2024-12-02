@@ -4,6 +4,7 @@ export const posts = [
     id: "pipos",
     titulo: "Por que castrar seu bichinho?",
     nome: "pipos",
+    favorito: false,
     tags: [
                 "educacional",
                 "saúde",
@@ -17,6 +18,7 @@ export const posts = [
         titulo: "Locais para levar seu cachorro para socializar!",
         id: "gatinho",
         nome: "gatinho",
+        favorito: false,
         tags: [
                 "educacional",
                 "saúde",
@@ -30,6 +32,7 @@ export const posts = [
         titulo: "Como adestrar seu gato!",
         id: "catiorro",
         nome: "catiorro",
+        favorito: false,
         tags: [
                 "educacional",
                 "lazer"
@@ -43,6 +46,7 @@ export const posts = [
       titulo: "Evento da ONG Protetores de Rua",
       id: "feirinha",
       nome: "feirinha",
+      favorito: false,
       endereco: "Rua Túlio Moreira, 34",
       tags: [
                   "eventos",
@@ -57,6 +61,7 @@ export const posts = [
           id: "adocaozinha",
           nome: "adocaozinha",
           endereco: "Rua Vitória Vasconcellos 56",
+          favorito: false,
           tags: [
                   "eventos",
                   "adoção",
@@ -70,6 +75,7 @@ export const posts = [
           titulo: "Feira de adoção de Animais - Ampara Animal",
           id: "nonoca",
           nome: "nonoca",
+          favorito: false,
           endereco: "Rua Rafael Godeiro 86",
           tags: [
                   "eventos",
@@ -83,6 +89,7 @@ export const posts = [
         id: "nhanha",
         titulo: "Evento de vacinação para seu aumiguinho!",
         nome: "nhanha",
+        favorito: false,
         endereco: "Praça Maria da Graça",
         tags: [
                     "vacinação",
@@ -97,6 +104,7 @@ export const posts = [
             id: "adocao-doacao-saude",
             titulo: "Adoção e Doação de Animais: Dê uma nova chance!",
             nome: "Adoção Responsável",
+            favorito: false,
             endereco: "Centro de Adoção Pet - Rua dos Animais Felizes, 123",
             tags: [
               "adoção",
@@ -111,6 +119,7 @@ export const posts = [
             id: "lazer-animal",
             titulo: "Diversão e Lazer para Seu Pet!",
             nome: "Atividades Recreativas para Animais",
+            favorito: false,
             endereco: "Parque Pet Feliz - Rua dos Bichos, 789",
             tags: [
               "lazer",
@@ -124,6 +133,7 @@ export const posts = [
         titulo: "Instituto Luisa Mell",
         id: "focinhos",
         nome: "focinhos de luz",
+        favorito: false,
         endereco: "Rua Rosalinda Cascavel 55",
         tags: [
                     "eventos",
@@ -137,6 +147,7 @@ export const posts = [
             titulo: "Protetores de Rua",
             id: "auauau",
             nome: "auauau",
+            favorito: false,
             endereco: "Rua do Limoreiro 1322",
             tags: [
                     "eventos",
@@ -151,6 +162,7 @@ export const posts = [
             titulo: "Ampara Animal",
             id: "dogslife",
             nome: "dogslife",
+            favorito: false,
             endereco: "Rua Castelinho 8234",
             tags: [
                     "eventos",
@@ -165,6 +177,7 @@ export const posts = [
           titulo: "Petshop Amigo Fiel",
           nome: "pets",
           id: "pets",
+          favorito: false,
           endereco: "Rua Principe Albuquerque 1108",
           tags: [
                       "eventos",
@@ -178,6 +191,7 @@ export const posts = [
               titulo: "Petshop Mundo Pet",
               nome: "hipet",
               id: "hipet",
+              favorito: false,
               endereco: "Rua Aopires Toledo 93",
               tags: [
                       "eventos",
@@ -192,6 +206,7 @@ export const posts = [
               titulo: "Petshop PetCare",
               nome: "ninoca",
               id: "ninoca",
+              favorito: false,
               endereco: "Rua Expertofeto 706",
               tags: [
                       "eventos",
