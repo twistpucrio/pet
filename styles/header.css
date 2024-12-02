@@ -35,7 +35,7 @@ body {
 #menu {
     display: flex;
     align-items: center;
-    gap: 3rem; /* Espaçamento entre os itens do menu */
+    gap: 1rem; /* Espaçamento entre os itens do menu */
 }
 
 #menu a {
