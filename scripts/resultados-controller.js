@@ -71,12 +71,12 @@ function adicionarFavorito(post) {
   const produtoExistente = favoritos.find(item => item.id === post.id);
 
   if (produtoExistente) {
-    const novosFavoritos = favoritos.filter(item => item.id !== post.id); 
-    sessionStorage.setItem('favorito', JSON.stringify(novosFavoritos)); 
+    const novosFavoritos = favoritos.filter(item => item.id !== post.id);
+    sessionStorage.setItem('favorito', JSON.stringify(novosFavoritos));
   } else {
     post.favorito = true;
     favoritos.push(post);
-    sessionStorage.setItem('favorito', JSON.stringify(favoritos)); 
+    sessionStorage.setItem('favorito', JSON.stringify(favoritos));
   }
 }
 
@@ -107,7 +107,7 @@ function renderPosts(posts, searchTerm = "") {
     botao.classList.add("botao");
 
     const botaoFavorito = document.createElement("img");
-    botaoFavorito.alt = "Imagem de coração para favoritos ou desfavoritar.";
+    botaoFavorito.alt = "Imagem de coração para favoritos ou desfavoritar";
 
     const favoritos = JSON.parse(sessionStorage.getItem('favorito')) || [];
     const produtoExistente = favoritos.find(item => item.id === post.id);
@@ -176,4 +176,22 @@ document.addEventListener("DOMContentLoaded", () => {
       searchPosts(event.target.value);
     }
   });
+
+  // Adicionar a lógica de filtro, se necessário
+  const checkboxes = document.querySelectorAll(".filter-checkbox");
+  checkboxes.forEach((checkbox) => {
+    checkbox.addEventListener("change", filterPostsByTags);
+  });
 });
+
+function filterPostsByTags() {
+  const selectedTags = Array.from(document.querySelectorAll(".filter-checkbox:checked")).map(
+    (checkbox) => checkbox.value
+  );
+
+  const filteredPosts = posts.filter((post) =>
+    selectedTags.every((tag) => post.tags.includes(tag))
+  );
+
+  renderPosts(filteredPosts);
+}
