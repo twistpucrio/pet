@@ -93,6 +93,8 @@ function renderPosts(posts, searchTerm = "") {
   posts.forEach((post) => {
     const card = document.createElement("div");
     card.classList.add("card");
+    card.setAttribute("id", post.id)
+
 
     const parte_de_cima = document.createElement("div");
     parte_de_cima.classList.add("parte_de_cima");
