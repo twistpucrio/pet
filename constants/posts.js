@@ -10,7 +10,7 @@ export const posts = [
                 "saúde",
                 "castração"
             ],
-    caminho_imagem: "../img/animal2.png",
+    caminho_imagem: "../img/castracao.jpg",
     alt_imagem: "Vários animais em um fundo branco: Labrador Retriever Amarelo, Papagaio cinza, Gato malhado, Porquinho da Índia marrom e branco, Porco marrom escuro, Coelho preto e Jabuti Marrom.",
     texto: "A castração é essencial para a saúde e bem-estar dos pets, ajudando a prevenir doenças graves, como câncer de mama, útero e próstata. Além disso, o procedimento reduz comportamentos indesejados, como agressividade e marcação de território, promovendo uma convivência mais tranquila. Animais castrados também têm menor tendência a fugir, já que perdem o instinto de buscar parceiros. Castrar seu bichinho contribui para o controle populacional e ajuda a diminuir o abandono e a superlotação de abrigos. É um ato de cuidado e responsabilidade, beneficiando tanto o animal quanto a sociedade."
     },
@@ -67,7 +67,7 @@ export const posts = [
                   "adoção",
                   "doação"
               ],
-          caminho_imagem: "../img/adocao.jpeg",
+          caminho_imagem: "../img/Cao-e-gato-juntos.jpg",
           alt_imagem: "Um cachorrinho preto e marrom (meio idoso) com placa com 'Me adota?' no pescoço em uma feira de adoção.",
           texto: "O Projeto Adote com Amor realiza eventos de adoção e castração gratuita para animais de rua em diversas regiões do Rio de Janeiro. Durante o evento, cães e gatos recebem alimentação, vacinas e castração, além de estarem disponíveis para adoção. O evento acontece ao longo de 3 dias, sempre em áreas públicas da cidade. O objetivo é reduzir o número de animais abandonados e conscientizar sobre a importância da castração. Adote com amor, castrate com responsabilidade."
       }, 
@@ -81,7 +81,7 @@ export const posts = [
                   "eventos",
                   "lazer"
               ],
-          caminho_imagem: "../img/cat3.jpg",
+          caminho_imagem: "../img/adocao.jpeg",
           alt_imagem: "",
           texto: "A Feira de Adoção de Animais organizada pela Ampara Animal acontece todos os meses, oferecendo uma oportunidade para cães e gatos em situação de abandono encontrarem um lar. Durante o evento, os animais recebem cuidados, como vacina e vermifugação. Além disso, os participantes podem aprender sobre adoção responsável e cuidados com os pets. O evento ocorre na sede da ONG, em São Paulo. Adote um amigo, mude uma vida!"
       },
@@ -111,7 +111,7 @@ export const posts = [
               "doação",
               "saúde",
             ],
-            caminho_imagem: "../img/auau.jpg",
+            caminho_imagem: "../img/adocao.jpg",
             alt_imagem: "Vários animais fofos esperando para serem adotados, incluindo um cachorro peludo, um gato de olhos grandes, um coelho branco e um pássaro colorido.",
             texto: "Adotar ou doar um animal é um ato de amor e responsabilidade. Ao adotar, você não só ganha um amigo fiel, como também ajuda a reduzir o número de animais abandonados e sem lar. Além disso, a adoção de animais resgatados pode contribuir para a sua saúde e bem-estar, proporcionando um lar seguro e amoroso. Seja responsável, adote ou doe de forma consciente e ajude a promover a felicidade dos animais e das famílias!"
           },
@@ -124,7 +124,7 @@ export const posts = [
             tags: [
               "lazer",
             ],
-            caminho_imagem: "../img/cachorrinho1.jpg",
+            caminho_imagem: "../img/lazer-pets.png",
             alt_imagem: "Cachorro brincando com uma bolinha em um parque, enquanto um gato observa em um arranhador ao fundo.",
             texto: "Assim como nós, nossos pets também merecem momentos de lazer e diversão. Proporcione ao seu amigo peludo atividades que estimulam seu corpo e mente, como brincar de buscar, correr ao ar livre ou interagir com brinquedos. Essas atividades não só ajudam a gastar energia, mas também promovem o bem-estar emocional do seu animal, reduzindo o estresse e melhorando a qualidade de vida. Traga seu pet para o Parque Pet Feliz e aproveite um dia de lazer juntos!"
           },
@@ -154,7 +154,7 @@ export const posts = [
                     "adoção",
                     "doação"
                 ],
-            caminho_imagem: "../img/ong2.jpg",
+            caminho_imagem: "../img/adocao-cao-gato.jpg",
             alt_imagem: "",
             texto: "Com 7 anos de atuação, a Protetores de Rua é uma ONG dedicada ao resgate e acolhimento de animais abandonados nas ruas. Oferecemos cuidados médicos, abrigo temporário e trabalhamos na busca por adoção responsável. Nossa missão é garantir dignidade e amor aos animais em situação de vulnerabilidade. A luta contra o abandono começa com um gesto de amor."
         }, 
@@ -183,7 +183,7 @@ export const posts = [
                       "eventos",
                       "adoção"
                   ],
-          caminho_imagem: "../img/petshop1.png",
+          caminho_imagem: "../img/petshop1.jpg",
           alt_imagem: "",
           texto: "Com 10 anos de experiência, a Amigo Fiel oferece produtos e serviços de qualidade para o bem-estar do seu pet. Atuamos com atendimento personalizado, garantindo saúde, conforto e diversão para cães, gatos e outros animais. Trabalhamos com alimentação, acessórios, higiene e cuidados veterinários. Seu pet, nossa prioridade!"
           },

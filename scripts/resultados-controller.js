@@ -114,7 +114,7 @@ function renderPosts(posts, searchTerm = "") {
 
     // Corrigindo os caminhos para favoritar e desfavoritar
     if (produtoExistente) {
-      botaoFavorito.src = "../img/desfavoritos.png"; // Ícone para desfavoritar
+      botaoFavorito.src = "../img/favoritos-selecionado.png"; // Ícone para desfavoritar
     } else {
       botaoFavorito.src = "../img/favoritos.webp"; // Ícone para favoritar
     }
