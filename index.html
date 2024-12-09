@@ -9,81 +9,73 @@
       <link rel="stylesheet" href="/styles/footer.css">
       <link rel="stylesheet" href="/styles/index.css">
       <script src="/scripts/index.js"></script>
-      
-
   </head>
   <body>
     <div id="postContainer"></div>
 
-          <header id="header">
-              <img id="logo" src="../img/logo.jpg" alt="logo ruffles.">
-              <nav id="menu">  
-                  <a href="../views/contate_nos.html" id="contate-nos">Contate-nos</a>
-                  <section id="pesquisa">
-                    <button id="botao-limpar-pesquisa">Limpar pesquisa</button>
-                    <input type="text" name="texto" id="searchInput" placeholder="Pesquisar em Ruffles"></input>
-                  </section>
-                  <button id="botao-barra-pesquisa">
-                    <img  id="sherlockdog" src="/img/sherlockdog.webp" alt="cachorrinho vestido de sherlock holmes com lupa na mão que equivale ao botão de busca.">
-                  </button>
-                  <a href="../views/favoritos.html">
-                      <img  id="imagem_favoritos" src="../img/favoritos.webp" alt="ícone de coração que encaminha para a página de favoritos.">
-                  </a>
-              </nav>
-          </header>
+    <header id="header">
+        <img id="logo" src="../img/logo.jpg" alt="logo ruffles.">
+        <nav id="menu">  
+            <a href="../views/contate_nos.html" id="contate-nos">Contate-nos</a>
+            <section id="pesquisa">
+              <button id="botao-limpar-pesquisa">Limpar pesquisa</button>
+              <input type="text" name="texto" id="searchInput" placeholder="Pesquisar em Ruffles"></input>
+            </section>
+            <button id="botao-barra-pesquisa">
+              <img  id="sherlockdog" src="/img/sherlockdog.webp" alt="cachorrinho vestido de sherlock holmes com lupa na mão que equivale ao botão de busca.">
+            </button>
+            <a href="../views/favoritos.html">
+                <img  id="imagem_favoritos" src="../img/favoritos.webp" alt="ícone de coração que encaminha para a página de favoritos.">
+            </a>
+        </nav>
+    </header>
 
-          <section id="main">
-            <img id="banner" src="/img/banner.png" alt="banner de animais fofinhos.">
-          </section>
-          <div class="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="../img/animal2.png" alt="Slide 1">
-                    <div class="carousel-caption">Por que castrar seu bichinho?</div>
-                </div>
-                <div class="carousel-item">
-                    <img src="../img/auau.jpg" alt="Slide 2">
-                    <div class="carousel-caption">Adoção e Doação de Animais: Dê uma nova chance!</div>
-                </div>
-                <div class="carousel-item">
-                    <img src="../img/vacina.jpg" alt="Slide 3">
-                    <div class="carousel-caption">Evento de vacinação para seu aumiguinho!</div>
-                </div>
+    <section id="main">
+        <img id="banner" src="/img/banner.png" alt="banner de animais fofinhos.">
+    </section>
+
+    <!-- Carrossel -->
+    <div class="carousel">
+        <div class="carousel-slide" id="carousel-slide">
+            <div class="carousel-item active" style="background-image: url('../img/animal2.png');">
+                <div class="carousel-caption">Por que castrar seu bichinho?</div>
             </div>
-            <!-- Botões de navegação -->
-            <button class="carousel-button carousel-prev" onclick="moveSlide(-1)">&#10094;</button>
-            <button class="carousel-button carousel-next" onclick="moveSlide(1)">&#10095;</button>
+            <div class="carousel-item" style="background-image: url('../img/auau.jpg');">
+                <div class="carousel-caption">Adoção e Doação de Animais: Dê uma nova chance!</div>
+            </div>
+            <div class="carousel-item" style="background-image: url('../img/vacina.jpg');">
+                <div class="carousel-caption">Evento de vacinação para seu aumiguinho!</div>
+            </div>
         </div>
-        
-        
-          <section id="vejamais">
-            <nav id="navvejamais">
-                <a id="avejamais" href="/views/resultado_busca.html">Veja mais</a>
-            </nav>
-          </section>
-          <br/><br/><br/>
+        <button class="carousel-button carousel-prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="carousel-button carousel-next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+    
+    <section id="vejamais">
+        <nav id="navvejamais">
+            <a id="avejamais" href="/views/resultado_busca.html">Veja mais</a>
+        </nav>
+    </section>
 
-          <footer id="footer">
-              <section id="creditos">
-                  <p>
-                      Desenvolvido por: Danielle Guimarães, Julia Simão, Mariana Ribeiro e Vitória Carteri.<br/>
-                      Projeto TWIST-2024
-                  </p>
-              </section>
-              <div id="conteudos-footer">
-                  <section id="versao">
-                      <p>
-                          ©Ruffles<br/>
-                          Versão do site: 1.0
-                      </p>     
-                  </section>
-                  <a href="https://github.com/twistpucrio/ruffles" target="_blank">
-                      <img  id="github" src="../img/github.png" alt="logo do github.">
-                  </a>
-                  <a id="sobre-nos" href="views/sobre_nos.html">Sobre nós</a> 
-              </div>
-          </footer>
-
-      </div>
+    <footer id="footer">
+        <section id="creditos">
+            <p>
+                Desenvolvido por: Danielle Guimarães, Julia Simão, Mariana Ribeiro e Vitória Carteri.<br/>
+                Projeto TWIST-2024
+            </p>
+        </section>
+        <div id="conteudos-footer">
+            <section id="versao">
+                <p>
+                    ©Ruffles<br/>
+                    Versão do site: 1.0
+                </p>     
+            </section>
+            <a href="https://github.com/twistpucrio/ruffles" target="_blank">
+                <img  id="github" src="../img/github.png" alt="logo do github.">
+            </a>
+            <a id="sobre-nos" href="views/sobre_nos.html">Sobre nós</a> 
+        </div>
+    </footer>
   </body>
 </html>

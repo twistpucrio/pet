@@ -1,55 +1,57 @@
-.carousel {
-    position: relative;
-    width: 90%; 
-    max-width: 1200px; 
-    height: 60vh; 
-    max-height: 600px; 
-    margin: 20px auto; 
-    overflow: visible; 
-    border-radius: 10px; 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+*{
+    margin: 0;
+}
+#main {
+    margin: 20px auto;
+    text-align: center;
 }
 
-.carousel-inner {
+#banner {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* ------------------ CAROUSEL ------------------ */
+
+/* Estilo do Carrossel */
+.carousel {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    height: 60vh;
+    margin: 20px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-slide {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    height: 100%; 
+    height: 100%;
 }
 
 .carousel-item {
-    display: none; 
-    flex-shrink: 0;
-    width: 100%;
+    flex: 0 0 100%;
+    display: none;
     height: 100%;
+    background-size: cover;
+    background-position: center;
+    align-items: flex-end;
     justify-content: center;
-    align-items: center;
 }
-
-.carousel-item.active {
-    display: flex; 
-}
-
-.carousel-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-}
-
 
 .carousel-caption {
-    position: absolute;
-    bottom: 10%;
-    left: 50%;
-    transform: translateX(-50%);
+    margin-bottom: 20px;
+    padding: 10px 20px;
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
-    padding: 10px 20px;
     border-radius: 10px;
     font-size: 1.2em;
     text-align: center;
     max-width: 90%;
 }
-
 
 .carousel-button {
     position: absolute;
@@ -58,7 +60,7 @@
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
-    padding: 15px;
+    padding: 10px;
     cursor: pointer;
     border-radius: 50%;
     font-size: 1.5em;
@@ -70,56 +72,46 @@
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-
-#banner {
-    display: block;
-    margin: 20px auto; 
-    max-width: 100%; 
-}
-
-
-.indicator {
-    width: 10px;
-    height: 10px;
-    margin: 0 5px;
-    background: rgba(255, 255, 255, 0.5);
-    border-radius: 50%;
-    cursor: pointer;
-    border: none;
-}
-
-.indicator.active {
-    background: white;
-}
 .carousel-prev {
-    left: -50px; 
+    left: 10px;
 }
 
 .carousel-next {
-    right: -50px; 
+    right: 10px;
 }
 
+.carousel-item.active {
+    display: flex;
+}
 
-@media screen and (max-width: 768px) {
+/* Responsividade para o Carrossel */
+@media screen and (max-width: 1024px) {
     .carousel {
-        height: 50vh; 
+        height: 50vh;
     }
 
     .carousel-caption {
-        font-size: 1em; 
+        font-size: 1em;
     }
 
     .carousel-button {
-        padding: 10px;
+        padding: 8px;
         font-size: 1.2em;
     }
+}
 
-    .carousel-prev {
-        left: -30px; 
+@media screen and (max-width: 768px) {
+    .carousel {
+        height: 50vh;
     }
 
-    .carousel-next {
-        right: -30px;
+    .carousel-caption {
+        font-size: 1em;
+    }
+
+    .carousel-button {
+        padding: 8px;
+        font-size: 1.2em;
     }
 }
 
@@ -133,15 +125,33 @@
     }
 
     .carousel-button {
-        padding: 8px;
+        padding: 6px;
         font-size: 1em;
     }
+}
 
-    .carousel-prev {
-        left: -20px;
-    }
+/* ------------------ VEJA MAIS ------------------ */
 
-    .carousel-next {
-        right: -20px;
-    }
+/* Estilo da Seção 'Veja Mais' */
+#vejamais {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#navvejamais {
+    display: flex;
+    justify-content: center;
+}
+
+#avejamais {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
