@@ -34,17 +34,17 @@ document.addEventListener("DOMContentLoaded", () => {
       botaoDesfavoritar.classList.add("desfavoritar-botao");
 
       const iconDesfavoritar = document.createElement("img");
-      iconDesfavoritar.src = "../img/desfavoritos.png"; // Caminho inicial da imagem
+      iconDesfavoritar.src = "../img/favoritos-selecionado.png"; // Caminho inicial da imagem
       iconDesfavoritar.alt = "Desfavoritar";
 
       botaoDesfavoritar.appendChild(iconDesfavoritar);
 
       // Alternar imagem do botão ao clicar
       botaoDesfavoritar.addEventListener("click", function() {
-        if (iconDesfavoritar.src.includes("desfavoritar.png")) {
+        if (iconDesfavoritar.src.includes("favoritos-selecionado.png")) {
           iconDesfavoritar.src = "../img/favoritos.webp"; // Troca para imagem de favoritar
         } else {
-          iconDesfavoritar.src = "../img/desfavoritos.png"; // Troca de volta para desfavoritar
+          iconDesfavoritar.src = "../img/favoritos-selecionado.png"; // Troca de volta para desfavoritar
         }
         desfavoritarPost(post.id);
       });
