@@ -2,7 +2,7 @@
     margin: 0;
 }
 #main {
-    margin: 20px auto;
+    margin: 15px auto;
     text-align: center;
 }
 
@@ -12,9 +12,7 @@
     object-fit: cover;
 }
 
-/* ------------------ CAROUSEL ------------------ */
 
-/* Estilo do Carrossel */
 .carousel {
     position: relative;
     width: 90%;
@@ -84,7 +82,6 @@
     display: flex;
 }
 
-/* Responsividade para o Carrossel */
 @media screen and (max-width: 1024px) {
     .carousel {
         height: 50vh;
@@ -130,9 +127,7 @@
     }
 }
 
-/* ------------------ VEJA MAIS ------------------ */
 
-/* Estilo da Seção 'Veja Mais' */
 #vejamais {
     text-align: center;
     margin: 20px 0;
