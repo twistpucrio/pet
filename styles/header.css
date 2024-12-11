@@ -39,6 +39,30 @@ body, html {
     gap: 1.5rem;
 }
 
+#lixeira{
+    width: 16px;
+    height: 20px;
+    margin: 2px 6px 5px 0;
+}
+
+#pesquisa_header{
+    border: #fff 3px solid;
+    background-color: #fff;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5px;
+}
+
+#searchInput{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    text-align: start;
+    
+}
+
 #menu a {
     text-decoration: none;
     color: #333;
@@ -48,12 +72,7 @@ body, html {
     border-radius: 20px;
 }
 
-#menu input[type="text"] {
-    padding: 0.5rem;
-    border-radius: 20px;
-    border: 1px solid #ccc;
-    font-size: 1rem;
-}
+
 
 #botao-barra-pesquisa {
     background-color: #bcd0cf;
