@@ -45,3 +45,5 @@ window.addEventListener("load", function(){
       limpar_barra_pesquisa();
     });
 });
+
+//BATATINHA
