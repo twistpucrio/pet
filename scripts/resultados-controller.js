@@ -195,3 +195,5 @@ function filterPostsByTags() {
 
   renderPosts(filteredPosts);
 }
+
+//batatinha
