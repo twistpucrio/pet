@@ -8,6 +8,7 @@
 
 #banner {
     width: 100%;
+    margin: 150px 0;
     height: auto;
     object-fit: cover;
 }

@@ -1,13 +1,25 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+}
+
+body, html {
+    margin: 0; /* Remove margens externas do body e do html */
+    padding: 0; /* Remove qualquer padding do body e do html */
+    height: 100%; /* Garante que o body e html ocupem 100% da altura */
+    overflow-x: hidden; /* Impede o scroll horizontal */
 }
 #header {
     background-color: #bcd0cf;
     display: flex;
     position: fixed;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 1rem;
+    top: 0; /* Garante que o header fique fixo no topo */
+    left: 0; /* Ajusta a posição no início */
+    right: 0; /* Ajusta a posição no final */
+    z-index: 1000; /* Eleva o header acima de outros elementos */
     width: 100%;
     max-width: 100%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
