@@ -10,6 +10,12 @@ function moveSlide(direction) {
     slides[currentIndex].classList.add('active');
 }
 
+function limpar_barra_pesquisa() {
+    let barra_pesquisa = document.getElementById("searchInput");
+    barra_pesquisa.value = "";
+  }
+  
+
 window.addEventListener("load", function() {
     let campo_texto = document.getElementById("searchInput");
     let btn_barra_pesquisa = document.getElementById("botao-barra-pesquisa");

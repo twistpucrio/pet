@@ -4,30 +4,43 @@
 #footer {
     background-color: #bcd0cf;
     text-align: center;
-    padding: 1rem;
+    font-size: medium;
+    padding: 0.1%;
 }
 
 #conteudos-footer {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
 }
+
+#versao{
+    display: inline-block;
+    justify-content: flex-start;
+    align-items: start;
+ 
+ }
 
 #versao p {
     margin: 0;
-    font-size: 0.9em;
 }
 
-#github {
-    height: 2rem;
+#github{
+    display: flex   ;
+    position: relative;
+    justify-content: center;
+    align-items: center;
     width: 2rem;
+    height: 2rem;
+    
 }
 
 #sobre-nos {
     text-decoration: none;
     color: #333;
     font-weight: 500;
+    display: inline-block;
 }
 
 /* Responsividade para Footer */

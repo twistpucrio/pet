@@ -8,7 +8,7 @@
 
 #banner {
     width: 100%;
-    margin: 150px 0;
+    margin: 150px 0 0 0;
     height: auto;
     object-fit: cover;
 }
@@ -44,8 +44,8 @@
 .carousel-caption {
     margin-bottom: 20px;
     padding: 10px 20px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+    background-color: #bcd0cfae;
+    color:black;
     border-radius: 10px;
     font-size: 1.2em;
     text-align: center;
@@ -56,8 +56,8 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+    background-color: #bcd0cf;
+    color:ffff;
     border: none;
     padding: 10px;
     cursor: pointer;
@@ -68,7 +68,7 @@
 }
 
 .carousel-button:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color:#98b6b38a;
 }
 
 .carousel-prev {
@@ -141,13 +141,19 @@
 
 #avejamais {
     text-decoration: none;
-    color: #333;
-    font-size: 1.2em;
-    font-weight: 500;
+    color: black;
+    padding: 1rem;
+    background-color: #bcd0cf;
+    border-radius: 1rem;
+    font-size: larger;
 }
 
 .carousel-item img {
     width: 100%;
     height: auto;
     object-fit: cover;
+}
+
+#avejamais:hover{
+    background-color:#98b6b38a;
 }
