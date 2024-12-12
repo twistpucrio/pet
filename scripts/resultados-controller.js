@@ -96,6 +96,8 @@ function renderPosts(posts, searchTerm = "") {
     const card = document.createElement("div");
     card.classList.add("card");
 
+    card.setAttribute("id", post.id);
+
     const parte_de_cima = document.createElement("div");
     parte_de_cima.classList.add("parte_de_cima");
 
