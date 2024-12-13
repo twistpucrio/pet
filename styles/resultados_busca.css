@@ -8,7 +8,6 @@
   min-width: 7rem;
 }
 
-/* style.css */
 .grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Ensures 3 columns */
@@ -36,4 +35,50 @@
 .card p {
   font-size: 0.9em;
   color: #666;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* 1 coluna em telas menores */
+  }
+
+  .card {
+    padding: 10px;
+  }
+
+  .card h3 {
+    font-size: 1em;
+  }
+
+  .card p {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #tags-section {
+    min-width: auto;
+  }
+
+  .grid-container {
+    gap: 15px;
+  }
+
+  .card {
+    padding: 8px;
+  }
+
+  .card h3 {
+    font-size: 0.9em;
+  }
+
+  .card p {
+    font-size: 0.75em;
+  }
 }

@@ -22,7 +22,7 @@ window.addEventListener("load", function() {
 
     btn_barra_pesquisa.addEventListener('click', function(event) {
         let searchTerm = campo_texto.value;
-        window.location.href = `HTML/resultado-busca.html?search=${encodeURIComponent(searchTerm)}`;
+        window.location.href = `../views/resultado_busca.html?search=${encodeURIComponent(searchTerm)}`;
     });
 
     campo_texto.addEventListener('keydown', function(event) {

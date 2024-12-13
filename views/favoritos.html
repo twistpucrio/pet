@@ -7,6 +7,11 @@
       <link rel="shortcut icon" href="../img/pata.webp" type="image/x-icon">
       <link rel="stylesheet" href="/styles/header.css">
       <link rel="stylesheet" href="/styles/footer.css">
+      <link rel="stylesheet" href="/styles/favorito.css">
+      <script type="module" src="../scripts/favorito.js"></script>
+      <script type="module" src="/scripts/resultados-controller.js"></script>
+      <script src="/scripts/index.js"></script>
+
   </head>
   <body>
       <div id="container">
@@ -16,25 +21,26 @@
                   <a href="../index.html">
                       <img id="logo" src="../img/logo.jpg" alt="logo ruffles. ao apertar este ícone você será encaminhado para a página principal.">
                   </a>
+                  <a href="../views/resultado_busca.html" id="voltar">Voltar</a>
                   <a href="contate_nos.html" id="contate-nos">Contate-nos</a>
-                  <button id="botao-limpar-pesquisa">Limpar pesquisa</button>
-                  <input type="text" name="texto" id="searchInput" placeholder="Pesquisar em Ruffles"></input>
-                  <button id="botao-barra-pesquisa">
+                  <div id="pesquisa_header">
+                    <input type="text" name="texto" id="searchInput" placeholder="Pesquisar em Ruffles"></input>
+                      <img  id="botao-limpar-pesquisa" src="../img/lixeira.png" alt="">
+                </div>
                   <img  id="sherlockdog" src="../img/sherlockdog.webp" alt="cachorrinho vestido de sherlock holmes com lupa na mão que equivale ao botão de busca.">
                 </button>
                   <a href="favoritos.html">
-                      <img  id="imagem_favoritos" src="../img/favoritos.webp" alt="ícone de coração que encaminha para a página de favoritos.">
+                      <img  id="imagem_favoritos" src="../img/favoritos-selecionado.png" alt="ícone de coração que encaminha para a página de favoritos.">
                   </a>
               </nav>
           </header>
 
           <section id="conteudo">
-
-          // Aqui serão exibidos os favoritos!
-
+        <div id="favoritosContainer" class="grid-container"></div>
+        <script src="favorito.js"></script>
           </section>
           <footer id="footer">
-              <section id="creditos">
+            <section id="creditos">
                   <p>
                       Desenvolvido por: Danielle Guimarães, Julia Simão, Mariana Ribeiro e Vitória Carteri.<br/>
                       Projeto TWIST-2024
