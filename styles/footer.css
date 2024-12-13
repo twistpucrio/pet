@@ -1,3 +1,6 @@
+*{
+    margin: 0;
+}
 #footer {
     background-color: #bcd0cf;
     text-align: center;
@@ -8,27 +11,65 @@
 #conteudos-footer {
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
-
 }
 
 #versao{
-   display: inline-block;
-   justify-content: flex-start;
-   align-items: start;
-
-}
-
-#versao p{
- margin: 0;
-}
-
-#github {
     display: inline-block;
-    height: 2rem;
+    justify-content: flex-start;
+    align-items: start;
+ 
+ }
+
+#versao p {
+    margin: 0;
+}
+
+#github{
+    display: flex   ;
+    position: relative;
+    justify-content: center;
+    align-items: center;
     width: 2rem;
+    height: 2rem;
+    
 }
 
 #sobre-nos {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
     display: inline-block;
+}
+
+/* Responsividade para Footer */
+@media screen and (max-width: 768px) {
+    #footer {
+        padding: 1.5rem;
+    }
+
+    #conteudos-footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #github, #sobre-nos {
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #footer {
+        padding: 2rem;
+    }
+
+    #conteudos-footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #github, #sobre-nos {
+        margin-bottom: 10px;
+    }
 }

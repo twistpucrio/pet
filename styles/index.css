@@ -1,91 +1,70 @@
-#main{
-    display: flex;
-    justify-content: center;
-    height: 70vh;
+*{
+    margin: 0;
 }
-
-#banner{
-    margin: 5px;
-    width: 85vw;
-    height: 45%;
-}
-
-#navvejamais{
+#main {
+    margin: 15px auto;
     text-align: center;
-    align-items: center;
 }
 
-#avejamais{
-    background-color: #bcd0cf;
-    padding: 1rem;
-    border-radius: 1rem;
-    color: black;
-    text-decoration: none;
-    font-size: larger;
-}
-
-#avejamais:hover{
-    background-color:#98b6b38a;
+#banner {
+    width: 100%;
+    margin: 150px 0 0 0;
+    height: auto;
+    object-fit: cover;
 }
 
 
 .carousel {
-    position: absolute;
-    top: 530px; /* Ajuste conforme necessário */
-    left: 50%;
-    transform: translateX(-50%);
-    max-width: 800px;
-    height: 500px;
-    overflow: hidden;
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    height: 60vh;
+    margin: 20px auto;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-.carousel-inner {
+.carousel-slide {
     display: flex;
     transition: transform 0.5s ease-in-out;
     height: 100%;
 }
 
 .carousel-item {
-    min-width: 100%;
-    position: relative;
+    flex: 0 0 100%;
+    display: none;
     height: 100%;
-}
-
-.carousel-item img {
-    width: 100%;
-    height: 100%; /* Ajustar a imagem à altura do carousel */
-    object-fit: cover; /* Garantir que a imagem preencha o espaço sem distorção */
+    background-size: cover;
+    background-position: center;
+    align-items: flex-end;
+    justify-content: center;
 }
 
 .carousel-caption {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+    margin-bottom: 20px;
+    padding: 10px 20px;
     background-color: #bcd0cfae;
     color:black;
-    padding: 10px 20px;
     border-radius: 10px;
+    font-size: 1.2em;
     text-align: center;
-    
+    max-width: 90%;
 }
 
-
-/* Especificidade para botões do carousel */
 .carousel-button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     background-color: #bcd0cf;
-    color:black;
+    color:ffff;
     border: none;
-    padding: 15px;
+    padding: 10px;
     cursor: pointer;
-    border-radius: 25%;
+    border-radius: 50%;
+    font-size: 1.5em;
     z-index: 10;
-    font-size: x-large;
+    transition: background-color 0.3s;
 }
 
 .carousel-button:hover {
@@ -93,11 +72,88 @@
 }
 
 .carousel-prev {
-    left: 480px;
-    top:780px;
+    left: 10px;
 }
 
 .carousel-next {
-    right: 480px;
-    top:780px;
+    right: 10px;
+}
+
+.carousel-item.active {
+    display: flex;
+}
+
+@media screen and (max-width: 1024px) {
+    .carousel {
+        height: 50vh;
+    }
+
+    .carousel-caption {
+        font-size: 1em;
+    }
+
+    .carousel-button {
+        padding: 8px;
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .carousel {
+        height: 50vh;
+    }
+
+    .carousel-caption {
+        font-size: 1em;
+    }
+
+    .carousel-button {
+        padding: 8px;
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .carousel {
+        height: 40vh;
+    }
+
+    .carousel-caption {
+        font-size: 0.9em;
+    }
+
+    .carousel-button {
+        padding: 6px;
+        font-size: 1em;
+    }
+}
+
+
+#vejamais {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#navvejamais {
+    display: flex;
+    justify-content: center;
+}
+
+#avejamais {
+    text-decoration: none;
+    color: black;
+    padding: 1rem;
+    background-color: #bcd0cf;
+    border-radius: 1rem;
+    font-size: larger;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+#avejamais:hover{
+    background-color:#98b6b38a;
 }

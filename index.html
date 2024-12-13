@@ -1,112 +1,88 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Ruffles</title>
+      <link rel="shortcut icon" href="/img/pata.webp" type="image/x-icon">
+      <link rel="stylesheet" href="/styles/header.css">
+      <link rel="stylesheet" href="/styles/footer.css">
+      <link rel="stylesheet" href="/styles/index.css">
+      <script src="/scripts/index.js"></script>
+  </head>
+  <body>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ruffles</title>
-    <link rel="shortcut icon" href="/img/pata.webp" type="image/x-icon">
-    <link rel="stylesheet" href="/styles/header.css">
-    <link rel="stylesheet" href="/styles/footer.css">
-    <link rel="stylesheet" href="/styles/index.css">
-    <script src="/scripts/index.js"></script>
-
-
-
-
-</head>
-
-<body>
     <div id="postContainer"></div>
 
     <header id="header">
         <img id="logo" src="../img/logo.jpg" alt="logo ruffles.">
-        <nav id="menu">
+        <nav id="menu">  
             <a href="../views/contate_nos.html" id="contate-nos">Contate-nos</a>
             <section id="pesquisa">
-
-                <input type="text" name="texto" id="searchInput" placeholder="Pesquisar em Ruffles"></input>
+              <div id="pesquisa_header">
+                  <input type="text" name="texto" id="searchInput" placeholder="Pesquisar em Ruffles"></input>
+                    <img  id="botao-limpar-pesquisa" src="img/lixeira.png" alt="">
+              </div>
             </section>
             <button id="botao-barra-pesquisa">
-                <img id="sherlockdog" src="/img/sherlockdog.webp"
-                    alt="cachorrinho vestido de sherlock holmes com lupa na mão que equivale ao botão de busca.">
+              <img  id="sherlockdog" src="/img/sherlockdog.webp" alt="cachorrinho vestido de sherlock holmes com lupa na mão que equivale ao botão de busca.">
             </button>
             <a href="../views/favoritos.html">
-                <img id="imagem_favoritos" src="../img/favoritos-selecionado.png"
-                    alt="ícone de coração que encaminha para a página de favoritos.">
+                <img  id="imagem_favoritos" src="../img/favoritos.webp" alt="ícone de coração que encaminha para a página de favoritos.">
             </a>
         </nav>
     </header>
 
     <section id="main">
-        <img id="banner" src="/img/banner.png" alt="banner de animais fofinhos.">
-    </section><br /><br /><br /><br /><br /><br /><br /><br />
+        <img id="banner" src="/img/banner.jpg" alt="banner de animais fofinhos.">
+    </section>
 
-
+    <!-- Carrossel -->
     <div class="carousel">
-        <div class="carousel-inner">
-            <!-- Slide 1 -->
-
-            <div class="carousel-item active">
-                <a href="../views/resultado_busca.html#pipos">
-                    <img src="../img/castracao.jpg" alt="Cão e gato no colo de um veterinário.">
-                    <div class="carousel-caption">
-                        <h3>Por que castrar seu bichinho?</h3>
-                    </div>
-                </a>
+        <div class="carousel-slide" id="carousel-slide">
+            <div class="carousel-item active" style="background-image: url('../img/castracao.jpg');">
+                <div class="carousel-caption">Por que castrar seu bichinho?</div>
             </div>
-            <!-- Slide 2 -->
-            <div class="carousel-item">
-                <a href="../views/resultado_busca.html#adocao-doacao-saude">
-                    <img src="../img/adocao.jpg" alt="Gatinhos em gaiola para adoção.">
-                    <div class="carousel-caption">
-                        <h3>Adoção e Doação de Animais: Dê uma nova chance!</h3>
-                    </div>
-                </a>
+            <div class="carousel-item" style="background-image: url('../img/adocao.jpg');">
+                <div class="carousel-caption">Adoção e Doação de Animais: Dê uma nova chance!</div>
             </div>
-            <!-- Slide 3 -->
-            <div class="carousel-item">
-                <a href="../views/resultado_busca.html#nhanha">
-                    <img src="../img/vacina.jpg" alt="gatinho e cachorrinho no veterinário.">
-                    <div class="carousel-caption">
-                        <h3>Evento de vacinação para seu aumiguinho!</h3>
-                    </div>
-                </a>
+            <div class="carousel-item" style="background-image: url('../img/vacina.jpg');">
+                <div class="carousel-caption">Evento de vacinação para seu aumiguinho!</div>
             </div>
         </div>
+        <button class="carousel-button carousel-prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="carousel-button carousel-next" onclick="moveSlide(1)">&#10095;</button>
     </div>
-
-    <button class="carousel-button carousel-prev" onclick="moveSlide(-1)">&#10094;</button>
-    <button class="carousel-button carousel-next" onclick="moveSlide(1)">&#10095;</button><br />
+    
     <section id="vejamais">
+        <br>
         <nav id="navvejamais">
             <a id="avejamais" href="/views/resultado_busca.html">Veja mais</a>
         </nav>
+        <br>
     </section>
-    <br /><br /><br />
 
     <footer id="footer">
         <section id="creditos">
             <p>
-                Desenvolvido por: Danielle Guimarães, Julia Simão, Mariana Ribeiro e Vitória Carteri.<br />
+                Desenvolvido por: Danielle Guimarães, Julia Simão, Mariana Ribeiro e Vitória Carteri.<br/>
                 Projeto TWIST-2024
             </p>
         </section>
         <div id="conteudos-footer">
             <section id="versao">
                 <p>
-                    ©Ruffles<br />
+                    ©Ruffles<br/>
                     Versão do site: 1.0
-                </p>
+                </p>     
             </section>
-            <a href="https://github.com/twistpucrio/ruffles" target="_blank">
-                <img id="github" src="../img/github.png" alt="logo do github.">
+          
+            <a id="agithub" href="https://github.com/twistpucrio/ruffles" target="_blank">
+                <img  id="github" src="../img/github.png" alt="logo do github.">
             </a>
-            <a id="sobre-nos" href="views/sobre_nos.html">Sobre nós</a>
+        
+            <a id="sobre-nos" href="views/sobre_nos.html">Sobre nós</a> 
         </div>
     </footer>
-
-    </div>
-</body>
-
+  </body>
 </html>
