@@ -1,6 +1,20 @@
 *{
     margin: 0;
 }
+
+.carousel-item.active a{
+    flex: 0 0 100%;
+    display: flex;
+    text-decoration: none;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    align-items: flex-end;
+    justify-content: center;
+}
+a{
+    text-decoration: none;
+}
 #main {
     margin: 15px auto;
     text-align: center;
@@ -26,7 +40,6 @@
 }
 
 .carousel-slide {
-    display: flex;
     transition: transform 0.5s ease-in-out;
     height: 100%;
 }
