@@ -16,6 +16,10 @@ html, body {
   flex-direction: column;
 }
 
+#favoritosContainer p{
+  font-size: 1.5em;
+}
+
 #tags-section {
   min-width: 7rem;
 }
